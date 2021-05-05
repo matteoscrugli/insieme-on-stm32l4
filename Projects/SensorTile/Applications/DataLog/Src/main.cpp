@@ -7,7 +7,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
 // DEVELOPMENT
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -366,6 +368,117 @@ uint32_t 									EndTime;
 uint32_t									CycleTime;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ADC
+
+#define CS_PIN 			GPIO_PIN_12 		// CS pin
+#define CS_PER 			GPIOG 				// CS peripheral
+
+#define START_PIN		GPIO_PIN_2	 		// START pin
+#define START_PER		GPIOC 				// START peripheral
+
+#define RESET_PIN		GPIO_PIN_0 			// RESET pin
+#define RESET_PER		GPIOC 				// RESET peripheral
+
+#define DRDY_PIN		GPIO_PIN_1 			// DRDY pin
+#define DRDY_PER 		GPIOC 				// DRDY peripheral
+
+//ADS1298
+#define ADS_CMD_WAKEUP		0x02			// Wake-up from standby mode
+#define ADS_CMD_STANDBY		0x04			// Enter standby mode
+#define ADS_CMD_RESET		0x06			// Reset the device
+#define ADS_CMD_START		0x08			// Start/restart (synchronize) conversions
+#define ADS_CMD_STOP		0x0A			// Stop the conversion
+#define ADS_CMD_OFFSETCAL	0x1A
+#define ADS_CMD_RDATAC		0x10			// Enable Read Data Continuous mode
+#define ADS_CMD_SDATAC		0x11			// Stop reading continuously
+#define ADS_CMD_RDATA		0x12			// Read data by command; supports multiple read back
+#define ADS_CMD_RREG		0x20			// 0x001r rrrr - 0x000n nnnn: Read n nnnn registers starting at address r rrrr
+#define ADS_CMD_WREG		0x40			// 0x010r rrrr - 0x000n nnnn:Write n nnnn registers starting at address r rrrr
+
+#define FMOD_1024			0x00			// 125sps
+#define FMOD_512			0x01			// 250sps
+#define FMOD_256			0x02			// 500sps (default)
+#define FMOD_128			0x03			// 1ksps
+#define FMOD_64				0x04			// 2ksps
+#define FMOD_32				0x05			// 4ksps
+#define FMOD_16				0x06			// 8ksps
+#define F_125_SPS			FMOD_1024		// 125sps
+#define F_250_SPS			FMOD_512		// 250sps
+#define F_500_SPS			FMOD_256		// 500sps (default)
+#define F_1000_SPS			FMOD_128		// 1ksps
+#define F_2000_SPS			FMOD_64			// 2ksps
+#define F_4000_SPS			FMOD_32			// 4ksps
+#define F_8000_SPS			FMOD_16			// 8ksps
+
+#define ADS_REG_ID			0x0
+#define ADS_REG_CONFIG1		0x1
+#define ADS_REG_CONFIG2 	0x2
+#define ADS_REG_CONFIG3		0x3
+#define ADS_REG_LOFF		0x4
+#define ADS_REG_CH1SET		0x5
+#define ADS_REG_CH2SET		0x6
+#define ADS_REG_CH3SET		0x7
+#define ADS_REG_CH4SET		0x8
+#define ADS_REG_CH5SET		0x9
+#define ADS_REG_CH6SET		0xA
+#define ADS_REG_CH7SET		0xB
+#define ADS_REG_CH8SET		0xC
+#define ADS_REG_RLDSENSP 	0xD
+#define ADS_REG_RLDSENSN	0xE
+#define ADS_REG_LOFFSENSP	0xF
+#define ADS_REG_LOFFSENSN	0x10
+#define ADS_REG_LOFF_FLIP	0x11
+#define ADS_REG_LOFF_STATP	0x12
+#define ADS_REG_LOFF_STATN	0x13
+#define ADS_REG_GPIO		0x14
+#define ADS_REG_PACE		0x15
+#define ADS_REG_RESP		0x16
+#define ADS_REG_CONFIG4		0x17
+#define ADS_REG_WCT1		0x18
+#define ADS_REG_WCT2		0x19
+#define ADS_REG_MAXADD		0x19
+
+#define ADS_VAL_REF_ON		0xA0			// Enable internal reference buffer
+#define ADS_VAL_VREF_4V		0x90			// Set internal reference to 4V (with AVDD = 5V only)
+#define ADS_VAL_CLK_OUT		0x88			// Enables clock output on the clk pin
+#define ADS_VAL_CLK_EN      0x08		    // if clksel pin is 1, CLK_EN = 0 3state, CLK_EN = 1 output clock
+#define ADS_VAL_INT_TEST	0x82			// Test signals are generated internally, amplitude: +/�(VREFP � VREFN)/2420
+#define ADS_VAL_TEST_FREQ_1	0x81			// Test signal frequency at 1Hz
+
+#define ADS_PGA_GAIN_6		0x00			// set PGA gain to 6
+#define ADS_PGA_GAIN_1		0x10			// set PGA gain to 1
+#define ADS_PGA_GAIN_2		0x20			// set PGA gain to 2
+#define ADS_PGA_GAIN_3		0x30			// set PGA gain to 3
+#define ADS_PGA_GAIN_4		0x40			// set PGA gain to 4
+#define ADS_PGA_GAIN_8		0x50			// set PGA gain to 8
+#define ADS_PGA_GAIN_12		0x60			// set PGA gain to 12
+
+#define ADS_MUX_ELECTRODE	0x00			// Normal electrode input
+#define ADS_MUX_SHORTED		0x01			// Input shorted for noise or offset measurement
+#define ADS_MUX_RLD_MEASURE	0x02			// Used for RLD measurements
+#define ADS_MUX_MVDD		0x03			// Supply voltage measurement
+#define ADS_MUX_TEMPERATURE	0x04			// Temperature sensor
+#define ADS_MUX_TEST		0x05			// Test signal
+#define ADS_MUX_RLD_DRP		0x06			// Positive input is the driver (RLD routing to input channel)
+#define ADS_MUX_RLD_DRN		0x07			// Negative input is the driver
+#define ADS_MUX_RLD_DRPN	0x08 			// Both inputs are connected to RLDIN
+#define ADS_MUX_CH3_TO_CH	0x09     		// Route channel 3 to the selected channel input
+
+#define ADS_CHPD			0x80
+
+
+
+void 			power_up_ADS(				);
+void 			start_ADS(					void);
+int 			send_sw_command_ADS(		unsigned char command);
+int 			write_single_register_ADS(	unsigned char address, unsigned char reg_data);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 
@@ -4242,6 +4355,135 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+}
+
+
+
+void power_up_ADS()
+{
+//    HAL_GPIO_WritePin(START_PER,START_PIN,GPIO_PIN_SET); // START_PORT|=START_PIN;
+//    HAL_GPIO_WritePin(CS_PER,CS_PIN,GPIO_PIN_RESET); // CS_PORT&=~CS_PIN;
+
+	HAL_GPIO_WritePin(START_PER,START_PIN,GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(RESET_PER,RESET_PIN,GPIO_PIN_RESET); // RESET_ADS;                      // Reset device
+    HAL_GPIO_WritePin(CS_PER,CS_PIN,GPIO_PIN_SET); // CS_PORT&=~CS_PIN;
+
+
+//    POWERUP_ADS;                    // Power up device
+//    //__delay_cycles(T_RST);
+
+//    //CLKSEL
+//    P3DIR &=~BIT7; //input direction
+//    P3SEL &=~ BIT7;
+
+
+//  //EXT_CLK
+//    P2DIR &=~ BIT2;
+//    P2SEL &=~ BIT2;
+//    P2IE &= ~BIT2;
+
+//
+    HAL_Delay(10); //__delay_cycles(T_RST);
+//    //__delay_cycles(T_POR);        // Wait t_por which is 2^16 tclk (2.048MHz) -> 32ms
+//    HAL_GPIO_WritePin(RESET_PER,RESET_PIN,GPIO_PIN_RESET); // RESET_ADS;                      // Reset device
+//    HAL_Delay(10); //__delay_cycles(T_RST);          // Hold reset for at least 1 sec
+//    HAL_GPIO_WritePin(RESET_PER,RESET_PIN,GPIO_PIN_SET); // RELEASE_ADS;                    // Release device from reset
+//    HAL_Delay(1000); //__delay_cycles(T_STA);          // Wait start interval before using the device: min 18tclk
+
+	HAL_GPIO_WritePin(START_PER,START_PIN,GPIO_PIN_SET);
+    HAL_GPIO_WritePin(RESET_PER,RESET_PIN,GPIO_PIN_SET); // RESET_ADS;                      // Reset device
+
+    send_sw_command_ADS(ADS_CMD_SDATAC);// Since ADS1192 at power-up is in RDATAC mode it is necessary to stop the conversion
+}
+
+void start_ADS(void){
+	HAL_GPIO_WritePin(CS_PER,CS_PIN,GPIO_PIN_SET); //CS_PORT&=~CS_PIN;
+
+    // __disable_interrupt();  //Disable interrupts globally
+
+    //---------------Electrode Configuration Channel1--------------
+//    configuration[1] = F_250_SPS; // CONFIG1
+//    configuration[2] =  REF_ON; ////CONFIG2
+//    configuration[3] = ELECTRODE | GAIN_12;  // CH1SET
+//    configuration[5] = PWUP_RLD | RLD2N | RLD2P; // RLD_SENS
+
+    write_single_register_ADS(	ADS_REG_CONFIG1, 	F_250_SPS 								);
+    write_single_register_ADS(	ADS_REG_CONFIG2, 	ADS_VAL_REF_ON	 						);
+    write_single_register_ADS(	ADS_REG_CH1SET, 	ADS_CHPD | ADS_MUX_SHORTED	 			);
+    write_single_register_ADS(	ADS_REG_CH2SET, 	ADS_CHPD | ADS_MUX_SHORTED	 			);
+    write_single_register_ADS(	ADS_REG_CH3SET, 	ADS_CHPD | ADS_MUX_SHORTED	 			);
+    write_single_register_ADS(	ADS_REG_CH4SET, 	ADS_PGA_GAIN_12 | ADS_MUX_ELECTRODE 	);
+    write_single_register_ADS(	ADS_REG_CH5SET, 	ADS_CHPD | ADS_MUX_SHORTED	 			);
+    write_single_register_ADS(	ADS_REG_CH6SET, 	ADS_CHPD | ADS_MUX_SHORTED	 			);
+    write_single_register_ADS(	ADS_REG_CH7SET, 	ADS_CHPD | ADS_MUX_SHORTED	 			);
+    write_single_register_ADS(	ADS_REG_CH8SET, 	ADS_CHPD | ADS_MUX_SHORTED	 			);
+
+    //------------------check register writing/reading--------------------------
+    //read_single_register_ADS1192(CONFIG2, &configuration[6], 0);
+
+    //------------------------------------------------------------------
+    send_sw_command_ADS(ADS_CMD_RDATAC); // send_sw_command_ADS1192_all(RDATAC);
+//    HAL_GPIO_WritePin(START_PER,START_PIN,GPIO_PIN_SET); // ???? HW_START_ADS;                             // starts ADS via hardware signal
+	HAL_GPIO_WritePin(CS_PER,CS_PIN,GPIO_PIN_RESET); // ???? CS_PORT&=~CS_PIN;
+//    __enable_interrupt();   //Enable interrupts globally
+//    ENABLE_DRDY_INT;                                           // enable interrupt on port 2 (DRDY)
+
+//  CODE !!
+}
+
+int write_single_register_ADS(unsigned char reg_address, unsigned char reg_data)
+{
+    unsigned char opcode;
+
+    if(reg_address > ADS_REG_MAXADD)
+        return -1;
+    if(reg_address == ADS_REG_GPIO)
+        return 0;
+
+    opcode = ADS_CMD_WREG + reg_address;                // Create OPCODE1 to perform read instruction
+
+//    interrupt_status = UCA0IE;              // Save Interrupt enable settings
+//    UCA0IE &= ~UCRXIE;                      // Disable interrupt on receive from ADS1192
+
+	HAL_GPIO_WritePin(CS_PER, CS_PIN, GPIO_PIN_RESET); // set_device_CS_ADS1192();// select the same ADS device
+
+//    while(!(UCA0IFG&UCTXIFG));
+//    UCA0TXBUF = opcode;      // Send read operation op-code
+	HAL_SPI_Transmit(&hspi3, &opcode, 1, 100);
+
+//    delayUS_ASM(32); //__delay_cycles(TX_DEL);
+
+    opcode = 0;
+
+//    while(!(UCA0IFG&UCTXIFG));
+//    UCA0TXBUF = 0x00;                       // For a single write the number of registers to be written should be 0
+	HAL_SPI_Transmit(&hspi3, &opcode, 1, 100);
+
+//    delayUS_ASM(32); //__delay_cycles(TX_DEL);
+
+//    while(!(UCA0IFG&UCTXIFG));
+//    UCA0TXBUF = reg_data;                   // Write register value
+	HAL_SPI_Transmit(&hspi3, &reg_data, 1, 100);
+
+//	delayUS_ASM(1);
+	HAL_GPIO_WritePin(CS_PER, CS_PIN, GPIO_PIN_SET); // unset_device_CS_ADS1192();            // deselect correct ADS device----------------------------------------------------------
+
+//    UCA0IE = interrupt_status;              // Restore Interrupt enable register
+
+    return 0;
+}
+
+
+int send_sw_command_ADS(unsigned char command)
+{
+    if(command > 0x12) return -1;
+
+	HAL_GPIO_WritePin(CS_PER, CS_PIN, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi3, &command, 1, 100);
+//	delayUS_ASM(1);
+	HAL_GPIO_WritePin(CS_PER, CS_PIN, GPIO_PIN_SET);
+
+    return 0;
 }
 
 

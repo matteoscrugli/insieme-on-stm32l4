@@ -952,6 +952,14 @@ Discarded input sections
                 0x0000000000000000       0x54 Application/User/main.o
  .text._Z12powerControlii
                 0x0000000000000000      0x128 Application/User/main.o
+ .text._Z12power_up_ADSv
+                0x0000000000000000       0x80 Application/User/main.o
+ .text._Z9start_ADSv
+                0x0000000000000000      0x364 Application/User/main.o
+ .text._Z25write_single_register_ADShh
+                0x0000000000000000       0x78 Application/User/main.o
+ .text._Z19send_sw_command_ADSh
+                0x0000000000000000       0x48 Application/User/main.o
  .text.Error_Handler
                 0x0000000000000000        0x4 Application/User/main.o
  .debug_macro   0x0000000000000000       0xc4 Application/User/main.o
@@ -42453,345 +42461,345 @@ LOAD /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none
                 0x00000000000012de       0x22 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(STM32L476RG_NUCLEO.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x6f7de
+.debug_info     0x0000000000000000    0x704f4
  .debug_info    0x0000000000000000     0x1feb Application/User/TargetPlatform.o
- .debug_info    0x0000000000001feb     0x7894 Application/User/main.o
- .debug_info    0x000000000000987f     0x3dc2 Application/User/sensor_service.o
- .debug_info    0x000000000000d641     0x2c08 Application/User/stm32l4xx_hal_msp.o
- .debug_info    0x0000000000010249     0x2c83 Application/User/stm32l4xx_it.o
- .debug_info    0x0000000000012ecc     0x2c21 Application/User/usbd_cdc_interface.o
- .debug_info    0x0000000000015aed     0x322f Application/User/usbd_conf.o
- .debug_info    0x0000000000018d1c      0xde6 Application/User/usbd_desc.o
- .debug_info    0x0000000000019b02     0x11f7 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
- .debug_info    0x000000000001acf9     0x2000 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
- .debug_info    0x000000000001ccf9     0x1f3c CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
- .debug_info    0x000000000001ec35     0x3faa CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
- .debug_info    0x0000000000022bdf     0x1d17 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
- .debug_info    0x00000000000248f6     0x22f4 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
- .debug_info    0x0000000000026bea     0x11b3 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
- .debug_info    0x0000000000027d9d     0x1195 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
- .debug_info    0x0000000000028f32     0x2edb CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
- .debug_info    0x000000000002be0d     0x432e Drivers/BSP/SensorTile/SensorTile.o
- .debug_info    0x000000000003013b     0x1fed Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_info    0x0000000000032128      0xde3 Drivers/CMSIS/system_stm32l4xx.o
- .debug_info    0x0000000000032f0b     0x1312 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
- .debug_info    0x000000000003421d     0x1712 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
- .debug_info    0x000000000003592f     0x1074 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
- .debug_info    0x00000000000369a3     0x1093 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
- .debug_info    0x0000000000037a36     0x1ec5 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
- .debug_info    0x00000000000398fb     0x12ff Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
- .debug_info    0x000000000003abfa     0x11a2 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
- .debug_info    0x000000000003bd9c     0x11bb Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
- .debug_info    0x000000000003cf57     0x2c5f Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
- .debug_info    0x000000000003fbb6     0x1f48 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
- .debug_info    0x0000000000041afe     0x3965 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
- .debug_info    0x0000000000045463     0x45cb Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
- .debug_info    0x0000000000049a2e     0x1dc6 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
- .debug_info    0x000000000004b7f4     0x212b Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
- .debug_info    0x000000000004d91f       0x22 Example/SW4STM32/startup_stm32l476xx.o
- .debug_info    0x000000000004d941     0x2c69 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_info    0x00000000000505aa      0xacb Middlewares/FreeRTOS/list.o
- .debug_info    0x0000000000051075     0x2869 Middlewares/FreeRTOS/queue.o
- .debug_info    0x00000000000538de     0x3c57 Middlewares/FreeRTOS/tasks.o
- .debug_info    0x0000000000057535     0x1c69 Middlewares/FreeRTOS/timers.o
- .debug_info    0x000000000005919e      0xcb7 Middlewares/FreeRTOS/portable/heap_4.o
- .debug_info    0x0000000000059e55      0x6f8 Middlewares/FreeRTOS/portable/port.o
- .debug_info    0x000000000005a54d     0x39a4 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_info    0x000000000005def1     0x3b6d Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
- .debug_info    0x0000000000061a5e     0x11e1 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
- .debug_info    0x0000000000062c3f     0x166c Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
- .debug_info    0x00000000000642ab     0x167d Middlewares/STM32_BlueNRG/HCI/hci.o
- .debug_info    0x0000000000065928     0x2963 Middlewares/STM32_BlueNRG/HCI/hci_le.o
- .debug_info    0x000000000006828b     0x10af Middlewares/STM32_BlueNRG/Utils/ble_list.o
- .debug_info    0x000000000006933a      0xa9a Middlewares/STM32_BlueNRG/Utils/gp_timer.o
- .debug_info    0x0000000000069dd4      0x986 Middlewares/STM32_BlueNRG/Utils/osal.o
- .debug_info    0x000000000006a75a     0x15af Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
- .debug_info    0x000000000006bd09     0x14b9 Middlewares/STM32_USBD_Library/Core/usbd_core.o
- .debug_info    0x000000000006d1c2     0x1623 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
- .debug_info    0x000000000006e7e5      0xff9 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+ .debug_info    0x0000000000001feb     0x85aa Application/User/main.o
+ .debug_info    0x000000000000a595     0x3dc2 Application/User/sensor_service.o
+ .debug_info    0x000000000000e357     0x2c08 Application/User/stm32l4xx_hal_msp.o
+ .debug_info    0x0000000000010f5f     0x2c83 Application/User/stm32l4xx_it.o
+ .debug_info    0x0000000000013be2     0x2c21 Application/User/usbd_cdc_interface.o
+ .debug_info    0x0000000000016803     0x322f Application/User/usbd_conf.o
+ .debug_info    0x0000000000019a32      0xde6 Application/User/usbd_desc.o
+ .debug_info    0x000000000001a818     0x11f7 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+ .debug_info    0x000000000001ba0f     0x2000 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+ .debug_info    0x000000000001da0f     0x1f3c CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+ .debug_info    0x000000000001f94b     0x3faa CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+ .debug_info    0x00000000000238f5     0x1d17 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+ .debug_info    0x000000000002560c     0x22f4 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+ .debug_info    0x0000000000027900     0x11b3 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+ .debug_info    0x0000000000028ab3     0x1195 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+ .debug_info    0x0000000000029c48     0x2edb CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+ .debug_info    0x000000000002cb23     0x432e Drivers/BSP/SensorTile/SensorTile.o
+ .debug_info    0x0000000000030e51     0x1fed Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_info    0x0000000000032e3e      0xde3 Drivers/CMSIS/system_stm32l4xx.o
+ .debug_info    0x0000000000033c21     0x1312 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+ .debug_info    0x0000000000034f33     0x1712 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+ .debug_info    0x0000000000036645     0x1074 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+ .debug_info    0x00000000000376b9     0x1093 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+ .debug_info    0x000000000003874c     0x1ec5 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+ .debug_info    0x000000000003a611     0x12ff Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+ .debug_info    0x000000000003b910     0x11a2 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+ .debug_info    0x000000000003cab2     0x11bb Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+ .debug_info    0x000000000003dc6d     0x2c5f Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+ .debug_info    0x00000000000408cc     0x1f48 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+ .debug_info    0x0000000000042814     0x3965 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+ .debug_info    0x0000000000046179     0x45cb Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+ .debug_info    0x000000000004a744     0x1dc6 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+ .debug_info    0x000000000004c50a     0x212b Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+ .debug_info    0x000000000004e635       0x22 Example/SW4STM32/startup_stm32l476xx.o
+ .debug_info    0x000000000004e657     0x2c69 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_info    0x00000000000512c0      0xacb Middlewares/FreeRTOS/list.o
+ .debug_info    0x0000000000051d8b     0x2869 Middlewares/FreeRTOS/queue.o
+ .debug_info    0x00000000000545f4     0x3c57 Middlewares/FreeRTOS/tasks.o
+ .debug_info    0x000000000005824b     0x1c69 Middlewares/FreeRTOS/timers.o
+ .debug_info    0x0000000000059eb4      0xcb7 Middlewares/FreeRTOS/portable/heap_4.o
+ .debug_info    0x000000000005ab6b      0x6f8 Middlewares/FreeRTOS/portable/port.o
+ .debug_info    0x000000000005b263     0x39a4 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_info    0x000000000005ec07     0x3b6d Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_info    0x0000000000062774     0x11e1 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+ .debug_info    0x0000000000063955     0x166c Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_info    0x0000000000064fc1     0x167d Middlewares/STM32_BlueNRG/HCI/hci.o
+ .debug_info    0x000000000006663e     0x2963 Middlewares/STM32_BlueNRG/HCI/hci_le.o
+ .debug_info    0x0000000000068fa1     0x10af Middlewares/STM32_BlueNRG/Utils/ble_list.o
+ .debug_info    0x000000000006a050      0xa9a Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+ .debug_info    0x000000000006aaea      0x986 Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_info    0x000000000006b470     0x15af Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+ .debug_info    0x000000000006ca1f     0x14b9 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+ .debug_info    0x000000000006ded8     0x1623 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+ .debug_info    0x000000000006f4fb      0xff9 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
 
-.debug_abbrev   0x0000000000000000     0xb472
+.debug_abbrev   0x0000000000000000     0xb483
  .debug_abbrev  0x0000000000000000      0x252 Application/User/TargetPlatform.o
- .debug_abbrev  0x0000000000000252      0x69a Application/User/main.o
- .debug_abbrev  0x00000000000008ec      0x4f3 Application/User/sensor_service.o
- .debug_abbrev  0x0000000000000ddf      0x295 Application/User/stm32l4xx_hal_msp.o
- .debug_abbrev  0x0000000000001074      0x2ad Application/User/stm32l4xx_it.o
- .debug_abbrev  0x0000000000001321      0x3e5 Application/User/usbd_cdc_interface.o
- .debug_abbrev  0x0000000000001706      0x33d Application/User/usbd_conf.o
- .debug_abbrev  0x0000000000001a43      0x2cc Application/User/usbd_desc.o
- .debug_abbrev  0x0000000000001d0f      0x283 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
- .debug_abbrev  0x0000000000001f92      0x403 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
- .debug_abbrev  0x0000000000002395      0x3a9 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
- .debug_abbrev  0x000000000000273e      0x3ed CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
- .debug_abbrev  0x0000000000002b2b      0x310 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
- .debug_abbrev  0x0000000000002e3b      0x380 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
- .debug_abbrev  0x00000000000031bb      0x285 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
- .debug_abbrev  0x0000000000003440      0x285 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
- .debug_abbrev  0x00000000000036c5      0x3f0 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
- .debug_abbrev  0x0000000000003ab5      0x4c1 Drivers/BSP/SensorTile/SensorTile.o
- .debug_abbrev  0x0000000000003f76      0x411 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_abbrev  0x0000000000004387      0x228 Drivers/CMSIS/system_stm32l4xx.o
- .debug_abbrev  0x00000000000045af      0x306 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
- .debug_abbrev  0x00000000000048b5      0x3c4 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
- .debug_abbrev  0x0000000000004c79      0x2e2 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
- .debug_abbrev  0x0000000000004f5b      0x2b4 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
- .debug_abbrev  0x000000000000520f      0x3e3 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
- .debug_abbrev  0x00000000000055f2      0x321 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
- .debug_abbrev  0x0000000000005913      0x26a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
- .debug_abbrev  0x0000000000005b7d      0x318 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
- .debug_abbrev  0x0000000000005e95      0x3b5 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
- .debug_abbrev  0x000000000000624a      0x3a7 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
- .debug_abbrev  0x00000000000065f1      0x436 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
- .debug_abbrev  0x0000000000006a27      0x40c Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
- .debug_abbrev  0x0000000000006e33      0x393 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
- .debug_abbrev  0x00000000000071c6      0x3fe Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
- .debug_abbrev  0x00000000000075c4       0x12 Example/SW4STM32/startup_stm32l476xx.o
- .debug_abbrev  0x00000000000075d6      0x4b1 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_abbrev  0x0000000000007a87      0x21c Middlewares/FreeRTOS/list.o
- .debug_abbrev  0x0000000000007ca3      0x40d Middlewares/FreeRTOS/queue.o
- .debug_abbrev  0x00000000000080b0      0x4dc Middlewares/FreeRTOS/tasks.o
- .debug_abbrev  0x000000000000858c      0x3a7 Middlewares/FreeRTOS/timers.o
- .debug_abbrev  0x0000000000008933      0x356 Middlewares/FreeRTOS/portable/heap_4.o
- .debug_abbrev  0x0000000000008c89      0x295 Middlewares/FreeRTOS/portable/port.o
- .debug_abbrev  0x0000000000008f1e      0x28f Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_abbrev  0x00000000000091ad      0x2ae Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
- .debug_abbrev  0x000000000000945b      0x25a Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
- .debug_abbrev  0x00000000000096b5      0x3ec Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
- .debug_abbrev  0x0000000000009aa1      0x3f0 Middlewares/STM32_BlueNRG/HCI/hci.o
- .debug_abbrev  0x0000000000009e91      0x28f Middlewares/STM32_BlueNRG/HCI/hci_le.o
- .debug_abbrev  0x000000000000a120      0x2ed Middlewares/STM32_BlueNRG/Utils/ble_list.o
- .debug_abbrev  0x000000000000a40d      0x227 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
- .debug_abbrev  0x000000000000a634      0x1fe Middlewares/STM32_BlueNRG/Utils/osal.o
- .debug_abbrev  0x000000000000a832      0x31d Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
- .debug_abbrev  0x000000000000ab4f      0x327 Middlewares/STM32_USBD_Library/Core/usbd_core.o
- .debug_abbrev  0x000000000000ae76      0x3e7 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
- .debug_abbrev  0x000000000000b25d      0x215 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+ .debug_abbrev  0x0000000000000252      0x6ab Application/User/main.o
+ .debug_abbrev  0x00000000000008fd      0x4f3 Application/User/sensor_service.o
+ .debug_abbrev  0x0000000000000df0      0x295 Application/User/stm32l4xx_hal_msp.o
+ .debug_abbrev  0x0000000000001085      0x2ad Application/User/stm32l4xx_it.o
+ .debug_abbrev  0x0000000000001332      0x3e5 Application/User/usbd_cdc_interface.o
+ .debug_abbrev  0x0000000000001717      0x33d Application/User/usbd_conf.o
+ .debug_abbrev  0x0000000000001a54      0x2cc Application/User/usbd_desc.o
+ .debug_abbrev  0x0000000000001d20      0x283 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+ .debug_abbrev  0x0000000000001fa3      0x403 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+ .debug_abbrev  0x00000000000023a6      0x3a9 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+ .debug_abbrev  0x000000000000274f      0x3ed CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+ .debug_abbrev  0x0000000000002b3c      0x310 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+ .debug_abbrev  0x0000000000002e4c      0x380 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+ .debug_abbrev  0x00000000000031cc      0x285 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+ .debug_abbrev  0x0000000000003451      0x285 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+ .debug_abbrev  0x00000000000036d6      0x3f0 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+ .debug_abbrev  0x0000000000003ac6      0x4c1 Drivers/BSP/SensorTile/SensorTile.o
+ .debug_abbrev  0x0000000000003f87      0x411 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_abbrev  0x0000000000004398      0x228 Drivers/CMSIS/system_stm32l4xx.o
+ .debug_abbrev  0x00000000000045c0      0x306 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+ .debug_abbrev  0x00000000000048c6      0x3c4 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+ .debug_abbrev  0x0000000000004c8a      0x2e2 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+ .debug_abbrev  0x0000000000004f6c      0x2b4 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+ .debug_abbrev  0x0000000000005220      0x3e3 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+ .debug_abbrev  0x0000000000005603      0x321 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+ .debug_abbrev  0x0000000000005924      0x26a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+ .debug_abbrev  0x0000000000005b8e      0x318 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+ .debug_abbrev  0x0000000000005ea6      0x3b5 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+ .debug_abbrev  0x000000000000625b      0x3a7 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+ .debug_abbrev  0x0000000000006602      0x436 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+ .debug_abbrev  0x0000000000006a38      0x40c Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+ .debug_abbrev  0x0000000000006e44      0x393 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+ .debug_abbrev  0x00000000000071d7      0x3fe Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+ .debug_abbrev  0x00000000000075d5       0x12 Example/SW4STM32/startup_stm32l476xx.o
+ .debug_abbrev  0x00000000000075e7      0x4b1 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_abbrev  0x0000000000007a98      0x21c Middlewares/FreeRTOS/list.o
+ .debug_abbrev  0x0000000000007cb4      0x40d Middlewares/FreeRTOS/queue.o
+ .debug_abbrev  0x00000000000080c1      0x4dc Middlewares/FreeRTOS/tasks.o
+ .debug_abbrev  0x000000000000859d      0x3a7 Middlewares/FreeRTOS/timers.o
+ .debug_abbrev  0x0000000000008944      0x356 Middlewares/FreeRTOS/portable/heap_4.o
+ .debug_abbrev  0x0000000000008c9a      0x295 Middlewares/FreeRTOS/portable/port.o
+ .debug_abbrev  0x0000000000008f2f      0x28f Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_abbrev  0x00000000000091be      0x2ae Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_abbrev  0x000000000000946c      0x25a Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+ .debug_abbrev  0x00000000000096c6      0x3ec Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_abbrev  0x0000000000009ab2      0x3f0 Middlewares/STM32_BlueNRG/HCI/hci.o
+ .debug_abbrev  0x0000000000009ea2      0x28f Middlewares/STM32_BlueNRG/HCI/hci_le.o
+ .debug_abbrev  0x000000000000a131      0x2ed Middlewares/STM32_BlueNRG/Utils/ble_list.o
+ .debug_abbrev  0x000000000000a41e      0x227 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+ .debug_abbrev  0x000000000000a645      0x1fe Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_abbrev  0x000000000000a843      0x31d Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+ .debug_abbrev  0x000000000000ab60      0x327 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+ .debug_abbrev  0x000000000000ae87      0x3e7 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+ .debug_abbrev  0x000000000000b26e      0x215 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
 
-.debug_loc      0x0000000000000000    0x2dd1f
+.debug_loc      0x0000000000000000    0x2df7f
  .debug_loc     0x0000000000000000       0x21 Application/User/TargetPlatform.o
- .debug_loc     0x0000000000000021      0xc8d Application/User/main.o
- .debug_loc     0x0000000000000cae     0x110f Application/User/sensor_service.o
- .debug_loc     0x0000000000001dbd       0x7c Application/User/stm32l4xx_hal_msp.o
- .debug_loc     0x0000000000001e39      0x15b Application/User/usbd_cdc_interface.o
- .debug_loc     0x0000000000001f94      0x669 Application/User/usbd_conf.o
- .debug_loc     0x00000000000025fd      0x393 Application/User/usbd_desc.o
- .debug_loc     0x0000000000002990      0x271 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
- .debug_loc     0x0000000000002c01     0x1cf0 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
- .debug_loc     0x00000000000048f1     0x1b20 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
- .debug_loc     0x0000000000006411     0x2fc6 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
- .debug_loc     0x00000000000093d7     0x15fe CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
- .debug_loc     0x000000000000a9d5     0x1ebd CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
- .debug_loc     0x000000000000c892      0x22d CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
- .debug_loc     0x000000000000cabf      0x1f0 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
- .debug_loc     0x000000000000ccaf      0xfe2 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
- .debug_loc     0x000000000000dc91     0x1584 Drivers/BSP/SensorTile/SensorTile.o
- .debug_loc     0x000000000000f215      0x274 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_loc     0x000000000000f489      0x1c0 Drivers/CMSIS/system_stm32l4xx.o
- .debug_loc     0x000000000000f649      0x103 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
- .debug_loc     0x000000000000f74c      0x5a8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
- .debug_loc     0x000000000000fcf4      0x74c Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
- .debug_loc     0x0000000000010440      0x3f5 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
- .debug_loc     0x0000000000010835     0x11e7 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
- .debug_loc     0x0000000000011a1c      0x1d0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
- .debug_loc     0x0000000000011bec      0x164 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
- .debug_loc     0x0000000000011d50      0x86a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
- .debug_loc     0x00000000000125ba      0xa11 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
- .debug_loc     0x0000000000012fcb     0x1308 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
- .debug_loc     0x00000000000142d3     0x3896 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
- .debug_loc     0x0000000000017b69     0x540c Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
- .debug_loc     0x000000000001cf75     0x12a1 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
- .debug_loc     0x000000000001e216     0x19ac Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
- .debug_loc     0x000000000001fbc2     0x15f4 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_loc     0x00000000000211b6       0x69 Middlewares/FreeRTOS/list.o
- .debug_loc     0x000000000002121f     0x159a Middlewares/FreeRTOS/queue.o
- .debug_loc     0x00000000000227b9     0x2770 Middlewares/FreeRTOS/tasks.o
- .debug_loc     0x0000000000024f29      0xcf5 Middlewares/FreeRTOS/timers.o
- .debug_loc     0x0000000000025c1e      0x355 Middlewares/FreeRTOS/portable/heap_4.o
- .debug_loc     0x0000000000025f73      0x17a Middlewares/FreeRTOS/portable/port.o
- .debug_loc     0x00000000000260ed     0x21db Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_loc     0x00000000000282c8     0x2398 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
- .debug_loc     0x000000000002a660      0x326 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
- .debug_loc     0x000000000002a986      0x6f3 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
- .debug_loc     0x000000000002b079      0x66b Middlewares/STM32_BlueNRG/HCI/hci.o
- .debug_loc     0x000000000002b6e4      0x9f5 Middlewares/STM32_BlueNRG/HCI/hci_le.o
- .debug_loc     0x000000000002c0d9      0x11c Middlewares/STM32_BlueNRG/Utils/ble_list.o
- .debug_loc     0x000000000002c1f5       0xb7 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
- .debug_loc     0x000000000002c2ac       0xc6 Middlewares/STM32_BlueNRG/Utils/osal.o
- .debug_loc     0x000000000002c372      0x5cb Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
- .debug_loc     0x000000000002c93d      0x6c3 Middlewares/STM32_USBD_Library/Core/usbd_core.o
- .debug_loc     0x000000000002d000      0xae3 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
- .debug_loc     0x000000000002dae3      0x23c Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+ .debug_loc     0x0000000000000021      0xeed Application/User/main.o
+ .debug_loc     0x0000000000000f0e     0x110f Application/User/sensor_service.o
+ .debug_loc     0x000000000000201d       0x7c Application/User/stm32l4xx_hal_msp.o
+ .debug_loc     0x0000000000002099      0x15b Application/User/usbd_cdc_interface.o
+ .debug_loc     0x00000000000021f4      0x669 Application/User/usbd_conf.o
+ .debug_loc     0x000000000000285d      0x393 Application/User/usbd_desc.o
+ .debug_loc     0x0000000000002bf0      0x271 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+ .debug_loc     0x0000000000002e61     0x1cf0 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+ .debug_loc     0x0000000000004b51     0x1b20 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+ .debug_loc     0x0000000000006671     0x2fc6 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+ .debug_loc     0x0000000000009637     0x15fe CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+ .debug_loc     0x000000000000ac35     0x1ebd CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+ .debug_loc     0x000000000000caf2      0x22d CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+ .debug_loc     0x000000000000cd1f      0x1f0 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+ .debug_loc     0x000000000000cf0f      0xfe2 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+ .debug_loc     0x000000000000def1     0x1584 Drivers/BSP/SensorTile/SensorTile.o
+ .debug_loc     0x000000000000f475      0x274 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_loc     0x000000000000f6e9      0x1c0 Drivers/CMSIS/system_stm32l4xx.o
+ .debug_loc     0x000000000000f8a9      0x103 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+ .debug_loc     0x000000000000f9ac      0x5a8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+ .debug_loc     0x000000000000ff54      0x74c Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+ .debug_loc     0x00000000000106a0      0x3f5 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+ .debug_loc     0x0000000000010a95     0x11e7 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+ .debug_loc     0x0000000000011c7c      0x1d0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+ .debug_loc     0x0000000000011e4c      0x164 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+ .debug_loc     0x0000000000011fb0      0x86a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+ .debug_loc     0x000000000001281a      0xa11 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+ .debug_loc     0x000000000001322b     0x1308 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+ .debug_loc     0x0000000000014533     0x3896 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+ .debug_loc     0x0000000000017dc9     0x540c Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+ .debug_loc     0x000000000001d1d5     0x12a1 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+ .debug_loc     0x000000000001e476     0x19ac Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+ .debug_loc     0x000000000001fe22     0x15f4 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_loc     0x0000000000021416       0x69 Middlewares/FreeRTOS/list.o
+ .debug_loc     0x000000000002147f     0x159a Middlewares/FreeRTOS/queue.o
+ .debug_loc     0x0000000000022a19     0x2770 Middlewares/FreeRTOS/tasks.o
+ .debug_loc     0x0000000000025189      0xcf5 Middlewares/FreeRTOS/timers.o
+ .debug_loc     0x0000000000025e7e      0x355 Middlewares/FreeRTOS/portable/heap_4.o
+ .debug_loc     0x00000000000261d3      0x17a Middlewares/FreeRTOS/portable/port.o
+ .debug_loc     0x000000000002634d     0x21db Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_loc     0x0000000000028528     0x2398 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_loc     0x000000000002a8c0      0x326 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+ .debug_loc     0x000000000002abe6      0x6f3 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_loc     0x000000000002b2d9      0x66b Middlewares/STM32_BlueNRG/HCI/hci.o
+ .debug_loc     0x000000000002b944      0x9f5 Middlewares/STM32_BlueNRG/HCI/hci_le.o
+ .debug_loc     0x000000000002c339      0x11c Middlewares/STM32_BlueNRG/Utils/ble_list.o
+ .debug_loc     0x000000000002c455       0xb7 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+ .debug_loc     0x000000000002c50c       0xc6 Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_loc     0x000000000002c5d2      0x5cb Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+ .debug_loc     0x000000000002cb9d      0x6c3 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+ .debug_loc     0x000000000002d260      0xae3 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+ .debug_loc     0x000000000002dd43      0x23c Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
 
-.debug_aranges  0x0000000000000000     0x21e8
+.debug_aranges  0x0000000000000000     0x2208
  .debug_aranges
                 0x0000000000000000       0x30 Application/User/TargetPlatform.o
  .debug_aranges
-                0x0000000000000030       0xf8 Application/User/main.o
+                0x0000000000000030      0x118 Application/User/main.o
  .debug_aranges
-                0x0000000000000128       0x88 Application/User/sensor_service.o
+                0x0000000000000148       0x88 Application/User/sensor_service.o
  .debug_aranges
-                0x00000000000001b0       0x40 Application/User/stm32l4xx_hal_msp.o
+                0x00000000000001d0       0x40 Application/User/stm32l4xx_hal_msp.o
  .debug_aranges
-                0x00000000000001f0       0x78 Application/User/stm32l4xx_it.o
+                0x0000000000000210       0x78 Application/User/stm32l4xx_it.o
  .debug_aranges
-                0x0000000000000268       0x48 Application/User/usbd_cdc_interface.o
+                0x0000000000000288       0x48 Application/User/usbd_cdc_interface.o
  .debug_aranges
-                0x00000000000002b0       0xf8 Application/User/usbd_conf.o
+                0x00000000000002d0       0xf8 Application/User/usbd_conf.o
  .debug_aranges
-                0x00000000000003a8       0x50 Application/User/usbd_desc.o
+                0x00000000000003c8       0x50 Application/User/usbd_desc.o
  .debug_aranges
-                0x00000000000003f8       0x20 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+                0x0000000000000418       0x20 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
  .debug_aranges
-                0x0000000000000418       0x30 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+                0x0000000000000438       0x30 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
  .debug_aranges
-                0x0000000000000448       0x28 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+                0x0000000000000468       0x28 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
  .debug_aranges
-                0x0000000000000470       0x30 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+                0x0000000000000490       0x30 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
  .debug_aranges
-                0x00000000000004a0       0x28 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+                0x00000000000004c0       0x28 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
  .debug_aranges
-                0x00000000000004c8       0x28 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+                0x00000000000004e8       0x28 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
  .debug_aranges
-                0x00000000000004f0       0x20 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+                0x0000000000000510       0x20 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
  .debug_aranges
-                0x0000000000000510       0x20 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+                0x0000000000000530       0x20 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
  .debug_aranges
-                0x0000000000000530       0x30 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+                0x0000000000000550       0x30 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
  .debug_aranges
-                0x0000000000000560      0x130 Drivers/BSP/SensorTile/SensorTile.o
+                0x0000000000000580      0x130 Drivers/BSP/SensorTile/SensorTile.o
  .debug_aranges
-                0x0000000000000690       0x88 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+                0x00000000000006b0       0x88 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
  .debug_aranges
-                0x0000000000000718       0x28 Drivers/CMSIS/system_stm32l4xx.o
+                0x0000000000000738       0x28 Drivers/CMSIS/system_stm32l4xx.o
  .debug_aranges
-                0x0000000000000740      0x110 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+                0x0000000000000760      0x110 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
  .debug_aranges
-                0x0000000000000850       0x98 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+                0x0000000000000870       0x98 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
  .debug_aranges
-                0x00000000000008e8       0x78 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+                0x0000000000000908       0x78 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
  .debug_aranges
-                0x0000000000000960       0x58 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+                0x0000000000000980       0x58 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
  .debug_aranges
-                0x00000000000009b8       0xc0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+                0x00000000000009d8       0xc0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
  .debug_aranges
-                0x0000000000000a78       0x58 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+                0x0000000000000a98       0x58 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
  .debug_aranges
-                0x0000000000000ad0       0x98 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+                0x0000000000000af0       0x98 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
  .debug_aranges
-                0x0000000000000b68      0x130 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+                0x0000000000000b88      0x130 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
  .debug_aranges
-                0x0000000000000c98       0x80 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+                0x0000000000000cb8       0x80 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
  .debug_aranges
-                0x0000000000000d18       0xb8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+                0x0000000000000d38       0xb8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
  .debug_aranges
-                0x0000000000000dd0      0x1a0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+                0x0000000000000df0      0x1a0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
  .debug_aranges
-                0x0000000000000f70      0x238 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+                0x0000000000000f90      0x238 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
  .debug_aranges
-                0x00000000000011a8       0xf8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+                0x00000000000011c8       0xf8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
  .debug_aranges
-                0x00000000000012a0      0x190 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+                0x00000000000012c0      0x190 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
  .debug_aranges
-                0x0000000000001430       0x28 Example/SW4STM32/startup_stm32l476xx.o
+                0x0000000000001450       0x28 Example/SW4STM32/startup_stm32l476xx.o
  .debug_aranges
-                0x0000000000001458      0x1b0 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+                0x0000000000001478      0x1b0 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
  .debug_aranges
-                0x0000000000001608       0x40 Middlewares/FreeRTOS/list.o
+                0x0000000000001628       0x40 Middlewares/FreeRTOS/list.o
  .debug_aranges
-                0x0000000000001648       0xd8 Middlewares/FreeRTOS/queue.o
+                0x0000000000001668       0xd8 Middlewares/FreeRTOS/queue.o
  .debug_aranges
-                0x0000000000001720      0x1b0 Middlewares/FreeRTOS/tasks.o
+                0x0000000000001740      0x1b0 Middlewares/FreeRTOS/tasks.o
  .debug_aranges
-                0x00000000000018d0       0x78 Middlewares/FreeRTOS/timers.o
+                0x00000000000018f0       0x78 Middlewares/FreeRTOS/timers.o
  .debug_aranges
-                0x0000000000001948       0x48 Middlewares/FreeRTOS/portable/heap_4.o
+                0x0000000000001968       0x48 Middlewares/FreeRTOS/portable/heap_4.o
  .debug_aranges
-                0x0000000000001990       0x88 Middlewares/FreeRTOS/portable/port.o
+                0x00000000000019b0       0x88 Middlewares/FreeRTOS/portable/port.o
  .debug_aranges
-                0x0000000000001a18      0x168 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+                0x0000000000001a38      0x168 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
  .debug_aranges
-                0x0000000000001b80      0x178 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+                0x0000000000001ba0      0x178 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
  .debug_aranges
-                0x0000000000001cf8       0x68 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+                0x0000000000001d18       0x68 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
  .debug_aranges
-                0x0000000000001d60       0x68 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+                0x0000000000001d80       0x68 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
  .debug_aranges
-                0x0000000000001dc8       0x60 Middlewares/STM32_BlueNRG/HCI/hci.o
+                0x0000000000001de8       0x60 Middlewares/STM32_BlueNRG/HCI/hci.o
  .debug_aranges
-                0x0000000000001e28      0x110 Middlewares/STM32_BlueNRG/HCI/hci_le.o
+                0x0000000000001e48      0x110 Middlewares/STM32_BlueNRG/HCI/hci_le.o
  .debug_aranges
-                0x0000000000001f38       0x78 Middlewares/STM32_BlueNRG/Utils/ble_list.o
+                0x0000000000001f58       0x78 Middlewares/STM32_BlueNRG/Utils/ble_list.o
  .debug_aranges
-                0x0000000000001fb0       0x40 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+                0x0000000000001fd0       0x40 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
  .debug_aranges
-                0x0000000000001ff0       0x28 Middlewares/STM32_BlueNRG/Utils/osal.o
+                0x0000000000002010       0x28 Middlewares/STM32_BlueNRG/Utils/osal.o
  .debug_aranges
-                0x0000000000002018       0x90 Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+                0x0000000000002038       0x90 Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
  .debug_aranges
-                0x00000000000020a8       0xa8 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+                0x00000000000020c8       0xa8 Middlewares/STM32_USBD_Library/Core/usbd_core.o
  .debug_aranges
-                0x0000000000002150       0x48 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+                0x0000000000002170       0x48 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
  .debug_aranges
-                0x0000000000002198       0x50 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+                0x00000000000021b8       0x50 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
 
-.debug_ranges   0x0000000000000000     0x5d80
+.debug_ranges   0x0000000000000000     0x5dc0
  .debug_ranges  0x0000000000000000       0x20 Application/User/TargetPlatform.o
- .debug_ranges  0x0000000000000020      0x2a0 Application/User/main.o
- .debug_ranges  0x00000000000002c0      0x2b8 Application/User/sensor_service.o
- .debug_ranges  0x0000000000000578       0xa0 Application/User/stm32l4xx_hal_msp.o
- .debug_ranges  0x0000000000000618       0x68 Application/User/stm32l4xx_it.o
- .debug_ranges  0x0000000000000680       0x88 Application/User/usbd_cdc_interface.o
- .debug_ranges  0x0000000000000708      0x130 Application/User/usbd_conf.o
- .debug_ranges  0x0000000000000838       0xf8 Application/User/usbd_desc.o
- .debug_ranges  0x0000000000000930       0x28 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
- .debug_ranges  0x0000000000000958      0x240 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
- .debug_ranges  0x0000000000000b98      0x138 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
- .debug_ranges  0x0000000000000cd0      0x530 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
- .debug_ranges  0x0000000000001200      0x1d0 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
- .debug_ranges  0x00000000000013d0      0x1c8 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
- .debug_ranges  0x0000000000001598       0x10 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
- .debug_ranges  0x00000000000015a8       0x10 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
- .debug_ranges  0x00000000000015b8      0x200 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
- .debug_ranges  0x00000000000017b8      0x870 Drivers/BSP/SensorTile/SensorTile.o
- .debug_ranges  0x0000000000002028       0xe0 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_ranges  0x0000000000002108       0x18 Drivers/CMSIS/system_stm32l4xx.o
- .debug_ranges  0x0000000000002120      0x100 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
- .debug_ranges  0x0000000000002220      0x128 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
- .debug_ranges  0x0000000000002348       0xb8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
- .debug_ranges  0x0000000000002400       0x60 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
- .debug_ranges  0x0000000000002460       0xf8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
- .debug_ranges  0x0000000000002558       0x48 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
- .debug_ranges  0x00000000000025a0       0x88 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
- .debug_ranges  0x0000000000002628      0x120 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
- .debug_ranges  0x0000000000002748      0x1d0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
- .debug_ranges  0x0000000000002918      0x248 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
- .debug_ranges  0x0000000000002b60      0xdf0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
- .debug_ranges  0x0000000000003950      0x690 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
- .debug_ranges  0x0000000000003fe0       0xe8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
- .debug_ranges  0x00000000000040c8      0x210 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
- .debug_ranges  0x00000000000042d8       0x20 Example/SW4STM32/startup_stm32l476xx.o
- .debug_ranges  0x00000000000042f8      0x308 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_ranges  0x0000000000004600       0x30 Middlewares/FreeRTOS/list.o
- .debug_ranges  0x0000000000004630      0x318 Middlewares/FreeRTOS/queue.o
- .debug_ranges  0x0000000000004948      0x7e8 Middlewares/FreeRTOS/tasks.o
- .debug_ranges  0x0000000000005130      0x208 Middlewares/FreeRTOS/timers.o
- .debug_ranges  0x0000000000005338       0x38 Middlewares/FreeRTOS/portable/heap_4.o
- .debug_ranges  0x0000000000005370       0xd8 Middlewares/FreeRTOS/portable/port.o
- .debug_ranges  0x0000000000005448      0x158 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_ranges  0x00000000000055a0      0x168 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
- .debug_ranges  0x0000000000005708       0x58 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
- .debug_ranges  0x0000000000005760      0x128 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
- .debug_ranges  0x0000000000005888      0x118 Middlewares/STM32_BlueNRG/HCI/hci.o
- .debug_ranges  0x00000000000059a0      0x100 Middlewares/STM32_BlueNRG/HCI/hci_le.o
- .debug_ranges  0x0000000000005aa0       0x68 Middlewares/STM32_BlueNRG/Utils/ble_list.o
- .debug_ranges  0x0000000000005b08       0x30 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
- .debug_ranges  0x0000000000005b38       0x18 Middlewares/STM32_BlueNRG/Utils/osal.o
- .debug_ranges  0x0000000000005b50       0x80 Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
- .debug_ranges  0x0000000000005bd0       0x98 Middlewares/STM32_USBD_Library/Core/usbd_core.o
- .debug_ranges  0x0000000000005c68       0xd8 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
- .debug_ranges  0x0000000000005d40       0x40 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+ .debug_ranges  0x0000000000000020      0x2e0 Application/User/main.o
+ .debug_ranges  0x0000000000000300      0x2b8 Application/User/sensor_service.o
+ .debug_ranges  0x00000000000005b8       0xa0 Application/User/stm32l4xx_hal_msp.o
+ .debug_ranges  0x0000000000000658       0x68 Application/User/stm32l4xx_it.o
+ .debug_ranges  0x00000000000006c0       0x88 Application/User/usbd_cdc_interface.o
+ .debug_ranges  0x0000000000000748      0x130 Application/User/usbd_conf.o
+ .debug_ranges  0x0000000000000878       0xf8 Application/User/usbd_desc.o
+ .debug_ranges  0x0000000000000970       0x28 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+ .debug_ranges  0x0000000000000998      0x240 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+ .debug_ranges  0x0000000000000bd8      0x138 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+ .debug_ranges  0x0000000000000d10      0x530 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+ .debug_ranges  0x0000000000001240      0x1d0 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+ .debug_ranges  0x0000000000001410      0x1c8 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+ .debug_ranges  0x00000000000015d8       0x10 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+ .debug_ranges  0x00000000000015e8       0x10 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+ .debug_ranges  0x00000000000015f8      0x200 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+ .debug_ranges  0x00000000000017f8      0x870 Drivers/BSP/SensorTile/SensorTile.o
+ .debug_ranges  0x0000000000002068       0xe0 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_ranges  0x0000000000002148       0x18 Drivers/CMSIS/system_stm32l4xx.o
+ .debug_ranges  0x0000000000002160      0x100 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+ .debug_ranges  0x0000000000002260      0x128 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+ .debug_ranges  0x0000000000002388       0xb8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+ .debug_ranges  0x0000000000002440       0x60 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+ .debug_ranges  0x00000000000024a0       0xf8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+ .debug_ranges  0x0000000000002598       0x48 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+ .debug_ranges  0x00000000000025e0       0x88 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+ .debug_ranges  0x0000000000002668      0x120 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+ .debug_ranges  0x0000000000002788      0x1d0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+ .debug_ranges  0x0000000000002958      0x248 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+ .debug_ranges  0x0000000000002ba0      0xdf0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+ .debug_ranges  0x0000000000003990      0x690 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+ .debug_ranges  0x0000000000004020       0xe8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+ .debug_ranges  0x0000000000004108      0x210 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+ .debug_ranges  0x0000000000004318       0x20 Example/SW4STM32/startup_stm32l476xx.o
+ .debug_ranges  0x0000000000004338      0x308 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_ranges  0x0000000000004640       0x30 Middlewares/FreeRTOS/list.o
+ .debug_ranges  0x0000000000004670      0x318 Middlewares/FreeRTOS/queue.o
+ .debug_ranges  0x0000000000004988      0x7e8 Middlewares/FreeRTOS/tasks.o
+ .debug_ranges  0x0000000000005170      0x208 Middlewares/FreeRTOS/timers.o
+ .debug_ranges  0x0000000000005378       0x38 Middlewares/FreeRTOS/portable/heap_4.o
+ .debug_ranges  0x00000000000053b0       0xd8 Middlewares/FreeRTOS/portable/port.o
+ .debug_ranges  0x0000000000005488      0x158 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_ranges  0x00000000000055e0      0x168 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_ranges  0x0000000000005748       0x58 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+ .debug_ranges  0x00000000000057a0      0x128 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_ranges  0x00000000000058c8      0x118 Middlewares/STM32_BlueNRG/HCI/hci.o
+ .debug_ranges  0x00000000000059e0      0x100 Middlewares/STM32_BlueNRG/HCI/hci_le.o
+ .debug_ranges  0x0000000000005ae0       0x68 Middlewares/STM32_BlueNRG/Utils/ble_list.o
+ .debug_ranges  0x0000000000005b48       0x30 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+ .debug_ranges  0x0000000000005b78       0x18 Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_ranges  0x0000000000005b90       0x80 Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+ .debug_ranges  0x0000000000005c10       0x98 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+ .debug_ranges  0x0000000000005ca8       0xd8 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+ .debug_ranges  0x0000000000005d80       0x40 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
 
-.debug_macro    0x0000000000000000    0x39d73
+.debug_macro    0x0000000000000000    0x39fbf
  .debug_macro   0x0000000000000000      0x603 Application/User/TargetPlatform.o
  .debug_macro   0x0000000000000603      0xa72 Application/User/TargetPlatform.o
  .debug_macro   0x0000000000001075       0x22 Application/User/TargetPlatform.o
@@ -42893,301 +42901,301 @@ OUTPUT(STM32L476RG_NUCLEO.elf elf32-littlearm)
  .debug_macro   0x0000000000027745       0x3a Application/User/TargetPlatform.o
  .debug_macro   0x000000000002777f       0x16 Application/User/TargetPlatform.o
  .debug_macro   0x0000000000027795       0x6e Application/User/TargetPlatform.o
- .debug_macro   0x0000000000027803      0xbe0 Application/User/main.o
- .debug_macro   0x00000000000283e3      0xb4a Application/User/main.o
- .debug_macro   0x0000000000028f2d       0x1c Application/User/main.o
- .debug_macro   0x0000000000028f49     0x1003 Application/User/main.o
- .debug_macro   0x0000000000029f4c       0x34 Application/User/main.o
- .debug_macro   0x0000000000029f80       0x97 Application/User/main.o
- .debug_macro   0x000000000002a017      0x34d Application/User/main.o
- .debug_macro   0x000000000002a364      0x104 Application/User/main.o
- .debug_macro   0x000000000002a468       0x43 Application/User/main.o
- .debug_macro   0x000000000002a4ab      0x137 Application/User/main.o
- .debug_macro   0x000000000002a5e2       0x35 Application/User/main.o
- .debug_macro   0x000000000002a617      0x168 Application/User/main.o
- .debug_macro   0x000000000002a77f       0x10 Application/User/main.o
- .debug_macro   0x000000000002a78f      0x3f4 Application/User/main.o
- .debug_macro   0x000000000002ab83       0x10 Application/User/main.o
- .debug_macro   0x000000000002ab93       0x1c Application/User/main.o
- .debug_macro   0x000000000002abaf       0xde Application/User/main.o
- .debug_macro   0x000000000002ac8d       0x18 Application/User/main.o
- .debug_macro   0x000000000002aca5      0x1da Application/User/main.o
- .debug_macro   0x000000000002ae7f      0x3cd Application/User/main.o
- .debug_macro   0x000000000002b24c       0x2b Application/User/main.o
- .debug_macro   0x000000000002b277       0xee Application/User/main.o
- .debug_macro   0x000000000002b365      0x124 Application/User/main.o
- .debug_macro   0x000000000002b489      0x168 Application/User/main.o
- .debug_macro   0x000000000002b5f1       0xeb Application/User/main.o
- .debug_macro   0x000000000002b6dc       0x10 Application/User/main.o
- .debug_macro   0x000000000002b6ec       0x1f Application/User/main.o
- .debug_macro   0x000000000002b70b      0x3c9 Application/User/main.o
- .debug_macro   0x000000000002bad4       0xc0 Application/User/main.o
- .debug_macro   0x000000000002bb94       0x8c Application/User/main.o
- .debug_macro   0x000000000002bc20       0x91 Application/User/main.o
- .debug_macro   0x000000000002bcb1       0x94 Application/User/main.o
- .debug_macro   0x000000000002bd45       0x63 Application/User/main.o
- .debug_macro   0x000000000002bda8       0xcf Application/User/main.o
- .debug_macro   0x000000000002be77       0x12 Application/User/main.o
- .debug_macro   0x000000000002be89       0x12 Application/User/main.o
- .debug_macro   0x000000000002be9b       0xd6 Application/User/main.o
- .debug_macro   0x000000000002bf71       0x76 Application/User/main.o
- .debug_macro   0x000000000002bfe7       0x16 Application/User/main.o
- .debug_macro   0x000000000002bffd       0x8e Application/User/main.o
- .debug_macro   0x000000000002c08b       0x40 Application/User/main.o
- .debug_macro   0x000000000002c0cb       0x1c Application/User/main.o
- .debug_macro   0x000000000002c0e7      0x175 Application/User/main.o
- .debug_macro   0x000000000002c25c      0x16e Application/User/main.o
- .debug_macro   0x000000000002c3ca       0x9c Application/User/main.o
- .debug_macro   0x000000000002c466      0x1b5 Application/User/main.o
- .debug_macro   0x000000000002c61b       0x50 Application/User/main.o
- .debug_macro   0x000000000002c66b       0xa5 Application/User/main.o
- .debug_macro   0x000000000002c710       0x1c Application/User/main.o
- .debug_macro   0x000000000002c72c       0x10 Application/User/main.o
- .debug_macro   0x000000000002c73c      0x386 Application/User/main.o
- .debug_macro   0x000000000002cac2      0x264 Application/User/main.o
- .debug_macro   0x000000000002cd26      0x4bd Application/User/main.o
- .debug_macro   0x000000000002d1e3      0x172 Application/User/main.o
- .debug_macro   0x000000000002d355       0x4c Application/User/main.o
- .debug_macro   0x000000000002d3a1       0xde Application/User/main.o
- .debug_macro   0x000000000002d47f       0x80 Application/User/main.o
- .debug_macro   0x000000000002d4ff       0x46 Application/User/main.o
- .debug_macro   0x000000000002d545      0x82b Application/User/sensor_service.o
- .debug_macro   0x000000000002dd70       0x1e Application/User/sensor_service.o
- .debug_macro   0x000000000002dd8e       0x5e Application/User/sensor_service.o
- .debug_macro   0x000000000002ddec      0x5c7 Application/User/stm32l4xx_hal_msp.o
- .debug_macro   0x000000000002e3b3      0x6d4 Application/User/stm32l4xx_it.o
- .debug_macro   0x000000000002ea87      0x609 Application/User/usbd_cdc_interface.o
- .debug_macro   0x000000000002f090      0x10e Application/User/usbd_cdc_interface.o
- .debug_macro   0x000000000002f19e       0x8d Application/User/usbd_cdc_interface.o
- .debug_macro   0x000000000002f22b       0x1c Application/User/usbd_cdc_interface.o
- .debug_macro   0x000000000002f247      0x5f9 Application/User/usbd_conf.o
- .debug_macro   0x000000000002f840      0x44e Application/User/usbd_desc.o
- .debug_macro   0x000000000002fc8e      0x1c9 Application/User/usbd_desc.o
- .debug_macro   0x000000000002fe57      0x1b7 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
- .debug_macro   0x000000000003000e      0x1b7 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
- .debug_macro   0x00000000000301c5      0x1b7 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
- .debug_macro   0x000000000003037c      0x632 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
- .debug_macro   0x00000000000309ae      0x1b7 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
- .debug_macro   0x0000000000030b65      0x1b7 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
- .debug_macro   0x0000000000030d1c      0x19d CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
- .debug_macro   0x0000000000030eb9      0x19d CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
- .debug_macro   0x0000000000031056      0x632 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
- .debug_macro   0x0000000000031688      0x3f2 Drivers/BSP/SensorTile/SensorTile.o
- .debug_macro   0x0000000000031a7a      0x40c Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_macro   0x0000000000031e86      0x177 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_macro   0x0000000000031ffd      0x16f Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_macro   0x000000000003216c       0x10 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_macro   0x000000000003217c      0x379 Drivers/CMSIS/system_stm32l4xx.o
- .debug_macro   0x00000000000324f5      0x3c0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
- .debug_macro   0x00000000000328b5      0x372 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
- .debug_macro   0x0000000000032c27      0x372 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
- .debug_macro   0x0000000000032f99      0x3b1 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
- .debug_macro   0x000000000003334a      0x38a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
- .debug_macro   0x00000000000336d4      0x372 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
- .debug_macro   0x0000000000033a46      0x38a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
- .debug_macro   0x0000000000033dd0      0x396 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
- .debug_macro   0x0000000000034166      0x609 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
- .debug_macro   0x000000000003476f      0x3a8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
- .debug_macro   0x0000000000034b17      0x37a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
- .debug_macro   0x0000000000034e91      0x373 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
- .debug_macro   0x0000000000035204      0x384 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
- .debug_macro   0x0000000000035588      0x379 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
- .debug_macro   0x0000000000035901      0x1ef Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_macro   0x0000000000035af0      0x124 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_macro   0x0000000000035c14       0xc7 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_macro   0x0000000000035cdb      0x17b Middlewares/FreeRTOS/list.o
- .debug_macro   0x0000000000035e56      0x201 Middlewares/FreeRTOS/queue.o
- .debug_macro   0x0000000000036057      0x264 Middlewares/FreeRTOS/tasks.o
- .debug_macro   0x00000000000362bb       0x11 Middlewares/FreeRTOS/tasks.o
- .debug_macro   0x00000000000362cc      0x1b8 Middlewares/FreeRTOS/timers.o
- .debug_macro   0x0000000000036484      0x1a2 Middlewares/FreeRTOS/portable/heap_4.o
- .debug_macro   0x0000000000036626      0x19e Middlewares/FreeRTOS/portable/port.o
- .debug_macro   0x00000000000367c4      0x458 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_macro   0x0000000000036c1c       0x3a Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_macro   0x0000000000036c56       0xa2 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_macro   0x0000000000036cf8      0x458 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
- .debug_macro   0x0000000000037150       0xab Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
- .debug_macro   0x00000000000371fb      0x458 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
- .debug_macro   0x0000000000037653      0x552 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
- .debug_macro   0x0000000000037ba5       0x46 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
- .debug_macro   0x0000000000037beb      0x435 Middlewares/STM32_BlueNRG/HCI/hci.o
- .debug_macro   0x0000000000038020      0x400 Middlewares/STM32_BlueNRG/HCI/hci_le.o
- .debug_macro   0x0000000000038420      0x395 Middlewares/STM32_BlueNRG/Utils/ble_list.o
- .debug_macro   0x00000000000387b5      0x3bb Middlewares/STM32_BlueNRG/Utils/gp_timer.o
- .debug_macro   0x0000000000038b70      0x14f Middlewares/STM32_BlueNRG/Utils/osal.o
- .debug_macro   0x0000000000038cbf       0x34 Middlewares/STM32_BlueNRG/Utils/osal.o
- .debug_macro   0x0000000000038cf3      0x43d Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
- .debug_macro   0x0000000000039130      0x411 Middlewares/STM32_USBD_Library/Core/usbd_core.o
- .debug_macro   0x0000000000039541      0x41b Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
- .debug_macro   0x000000000003995c      0x417 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+ .debug_macro   0x0000000000027803      0xe2c Application/User/main.o
+ .debug_macro   0x000000000002862f      0xb4a Application/User/main.o
+ .debug_macro   0x0000000000029179       0x1c Application/User/main.o
+ .debug_macro   0x0000000000029195     0x1003 Application/User/main.o
+ .debug_macro   0x000000000002a198       0x34 Application/User/main.o
+ .debug_macro   0x000000000002a1cc       0x97 Application/User/main.o
+ .debug_macro   0x000000000002a263      0x34d Application/User/main.o
+ .debug_macro   0x000000000002a5b0      0x104 Application/User/main.o
+ .debug_macro   0x000000000002a6b4       0x43 Application/User/main.o
+ .debug_macro   0x000000000002a6f7      0x137 Application/User/main.o
+ .debug_macro   0x000000000002a82e       0x35 Application/User/main.o
+ .debug_macro   0x000000000002a863      0x168 Application/User/main.o
+ .debug_macro   0x000000000002a9cb       0x10 Application/User/main.o
+ .debug_macro   0x000000000002a9db      0x3f4 Application/User/main.o
+ .debug_macro   0x000000000002adcf       0x10 Application/User/main.o
+ .debug_macro   0x000000000002addf       0x1c Application/User/main.o
+ .debug_macro   0x000000000002adfb       0xde Application/User/main.o
+ .debug_macro   0x000000000002aed9       0x18 Application/User/main.o
+ .debug_macro   0x000000000002aef1      0x1da Application/User/main.o
+ .debug_macro   0x000000000002b0cb      0x3cd Application/User/main.o
+ .debug_macro   0x000000000002b498       0x2b Application/User/main.o
+ .debug_macro   0x000000000002b4c3       0xee Application/User/main.o
+ .debug_macro   0x000000000002b5b1      0x124 Application/User/main.o
+ .debug_macro   0x000000000002b6d5      0x168 Application/User/main.o
+ .debug_macro   0x000000000002b83d       0xeb Application/User/main.o
+ .debug_macro   0x000000000002b928       0x10 Application/User/main.o
+ .debug_macro   0x000000000002b938       0x1f Application/User/main.o
+ .debug_macro   0x000000000002b957      0x3c9 Application/User/main.o
+ .debug_macro   0x000000000002bd20       0xc0 Application/User/main.o
+ .debug_macro   0x000000000002bde0       0x8c Application/User/main.o
+ .debug_macro   0x000000000002be6c       0x91 Application/User/main.o
+ .debug_macro   0x000000000002befd       0x94 Application/User/main.o
+ .debug_macro   0x000000000002bf91       0x63 Application/User/main.o
+ .debug_macro   0x000000000002bff4       0xcf Application/User/main.o
+ .debug_macro   0x000000000002c0c3       0x12 Application/User/main.o
+ .debug_macro   0x000000000002c0d5       0x12 Application/User/main.o
+ .debug_macro   0x000000000002c0e7       0xd6 Application/User/main.o
+ .debug_macro   0x000000000002c1bd       0x76 Application/User/main.o
+ .debug_macro   0x000000000002c233       0x16 Application/User/main.o
+ .debug_macro   0x000000000002c249       0x8e Application/User/main.o
+ .debug_macro   0x000000000002c2d7       0x40 Application/User/main.o
+ .debug_macro   0x000000000002c317       0x1c Application/User/main.o
+ .debug_macro   0x000000000002c333      0x175 Application/User/main.o
+ .debug_macro   0x000000000002c4a8      0x16e Application/User/main.o
+ .debug_macro   0x000000000002c616       0x9c Application/User/main.o
+ .debug_macro   0x000000000002c6b2      0x1b5 Application/User/main.o
+ .debug_macro   0x000000000002c867       0x50 Application/User/main.o
+ .debug_macro   0x000000000002c8b7       0xa5 Application/User/main.o
+ .debug_macro   0x000000000002c95c       0x1c Application/User/main.o
+ .debug_macro   0x000000000002c978       0x10 Application/User/main.o
+ .debug_macro   0x000000000002c988      0x386 Application/User/main.o
+ .debug_macro   0x000000000002cd0e      0x264 Application/User/main.o
+ .debug_macro   0x000000000002cf72      0x4bd Application/User/main.o
+ .debug_macro   0x000000000002d42f      0x172 Application/User/main.o
+ .debug_macro   0x000000000002d5a1       0x4c Application/User/main.o
+ .debug_macro   0x000000000002d5ed       0xde Application/User/main.o
+ .debug_macro   0x000000000002d6cb       0x80 Application/User/main.o
+ .debug_macro   0x000000000002d74b       0x46 Application/User/main.o
+ .debug_macro   0x000000000002d791      0x82b Application/User/sensor_service.o
+ .debug_macro   0x000000000002dfbc       0x1e Application/User/sensor_service.o
+ .debug_macro   0x000000000002dfda       0x5e Application/User/sensor_service.o
+ .debug_macro   0x000000000002e038      0x5c7 Application/User/stm32l4xx_hal_msp.o
+ .debug_macro   0x000000000002e5ff      0x6d4 Application/User/stm32l4xx_it.o
+ .debug_macro   0x000000000002ecd3      0x609 Application/User/usbd_cdc_interface.o
+ .debug_macro   0x000000000002f2dc      0x10e Application/User/usbd_cdc_interface.o
+ .debug_macro   0x000000000002f3ea       0x8d Application/User/usbd_cdc_interface.o
+ .debug_macro   0x000000000002f477       0x1c Application/User/usbd_cdc_interface.o
+ .debug_macro   0x000000000002f493      0x5f9 Application/User/usbd_conf.o
+ .debug_macro   0x000000000002fa8c      0x44e Application/User/usbd_desc.o
+ .debug_macro   0x000000000002feda      0x1c9 Application/User/usbd_desc.o
+ .debug_macro   0x00000000000300a3      0x1b7 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+ .debug_macro   0x000000000003025a      0x1b7 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+ .debug_macro   0x0000000000030411      0x1b7 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+ .debug_macro   0x00000000000305c8      0x632 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+ .debug_macro   0x0000000000030bfa      0x1b7 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+ .debug_macro   0x0000000000030db1      0x1b7 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+ .debug_macro   0x0000000000030f68      0x19d CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+ .debug_macro   0x0000000000031105      0x19d CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+ .debug_macro   0x00000000000312a2      0x632 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+ .debug_macro   0x00000000000318d4      0x3f2 Drivers/BSP/SensorTile/SensorTile.o
+ .debug_macro   0x0000000000031cc6      0x40c Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_macro   0x00000000000320d2      0x177 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_macro   0x0000000000032249      0x16f Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_macro   0x00000000000323b8       0x10 Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_macro   0x00000000000323c8      0x379 Drivers/CMSIS/system_stm32l4xx.o
+ .debug_macro   0x0000000000032741      0x3c0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+ .debug_macro   0x0000000000032b01      0x372 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+ .debug_macro   0x0000000000032e73      0x372 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+ .debug_macro   0x00000000000331e5      0x3b1 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+ .debug_macro   0x0000000000033596      0x38a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+ .debug_macro   0x0000000000033920      0x372 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+ .debug_macro   0x0000000000033c92      0x38a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+ .debug_macro   0x000000000003401c      0x396 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+ .debug_macro   0x00000000000343b2      0x609 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+ .debug_macro   0x00000000000349bb      0x3a8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+ .debug_macro   0x0000000000034d63      0x37a Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+ .debug_macro   0x00000000000350dd      0x373 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+ .debug_macro   0x0000000000035450      0x384 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+ .debug_macro   0x00000000000357d4      0x379 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+ .debug_macro   0x0000000000035b4d      0x1ef Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_macro   0x0000000000035d3c      0x124 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_macro   0x0000000000035e60       0xc7 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_macro   0x0000000000035f27      0x17b Middlewares/FreeRTOS/list.o
+ .debug_macro   0x00000000000360a2      0x201 Middlewares/FreeRTOS/queue.o
+ .debug_macro   0x00000000000362a3      0x264 Middlewares/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000036507       0x11 Middlewares/FreeRTOS/tasks.o
+ .debug_macro   0x0000000000036518      0x1b8 Middlewares/FreeRTOS/timers.o
+ .debug_macro   0x00000000000366d0      0x1a2 Middlewares/FreeRTOS/portable/heap_4.o
+ .debug_macro   0x0000000000036872      0x19e Middlewares/FreeRTOS/portable/port.o
+ .debug_macro   0x0000000000036a10      0x458 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_macro   0x0000000000036e68       0x3a Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_macro   0x0000000000036ea2       0xa2 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_macro   0x0000000000036f44      0x458 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_macro   0x000000000003739c       0xab Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_macro   0x0000000000037447      0x458 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+ .debug_macro   0x000000000003789f      0x552 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_macro   0x0000000000037df1       0x46 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_macro   0x0000000000037e37      0x435 Middlewares/STM32_BlueNRG/HCI/hci.o
+ .debug_macro   0x000000000003826c      0x400 Middlewares/STM32_BlueNRG/HCI/hci_le.o
+ .debug_macro   0x000000000003866c      0x395 Middlewares/STM32_BlueNRG/Utils/ble_list.o
+ .debug_macro   0x0000000000038a01      0x3bb Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+ .debug_macro   0x0000000000038dbc      0x14f Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_macro   0x0000000000038f0b       0x34 Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_macro   0x0000000000038f3f      0x43d Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+ .debug_macro   0x000000000003937c      0x411 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+ .debug_macro   0x000000000003978d      0x41b Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+ .debug_macro   0x0000000000039ba8      0x417 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
 
-.debug_line     0x0000000000000000    0x3193d
+.debug_line     0x0000000000000000    0x31a4e
  .debug_line    0x0000000000000000     0x1211 Application/User/TargetPlatform.o
- .debug_line    0x0000000000001211     0x2399 Application/User/main.o
- .debug_line    0x00000000000035aa     0x1b53 Application/User/sensor_service.o
- .debug_line    0x00000000000050fd     0x1190 Application/User/stm32l4xx_hal_msp.o
- .debug_line    0x000000000000628d     0x14d6 Application/User/stm32l4xx_it.o
- .debug_line    0x0000000000007763     0x12ad Application/User/usbd_cdc_interface.o
- .debug_line    0x0000000000008a10     0x13f6 Application/User/usbd_conf.o
- .debug_line    0x0000000000009e06      0xbf5 Application/User/usbd_desc.o
- .debug_line    0x000000000000a9fb      0x5e7 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
- .debug_line    0x000000000000afe2      0x8d9 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
- .debug_line    0x000000000000b8bb      0xa06 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
- .debug_line    0x000000000000c2c1     0x1649 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
- .debug_line    0x000000000000d90a      0x7fa CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
- .debug_line    0x000000000000e104      0x7f5 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
- .debug_line    0x000000000000e8f9      0x5b5 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
- .debug_line    0x000000000000eeae      0x5b5 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
- .debug_line    0x000000000000f463     0x14b3 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
- .debug_line    0x0000000000010916     0x13d3 Drivers/BSP/SensorTile/SensorTile.o
- .debug_line    0x0000000000011ce9      0xd7e Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_line    0x0000000000012a67      0xa13 Drivers/CMSIS/system_stm32l4xx.o
- .debug_line    0x000000000001347a      0xbe9 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
- .debug_line    0x0000000000014063      0xbdd Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
- .debug_line    0x0000000000014c40      0xd23 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
- .debug_line    0x0000000000015963      0xb78 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
- .debug_line    0x00000000000164db      0xfaf Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
- .debug_line    0x000000000001748a      0xa8e Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
- .debug_line    0x0000000000017f18      0xaef Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
- .debug_line    0x0000000000018a07      0xdca Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
- .debug_line    0x00000000000197d1     0x15e2 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
- .debug_line    0x000000000001adb3     0x1121 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
- .debug_line    0x000000000001bed4     0x1e22 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
- .debug_line    0x000000000001dcf6     0x2117 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
- .debug_line    0x000000000001fe0d      0xfb1 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
- .debug_line    0x0000000000020dbe     0x108f Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
- .debug_line    0x0000000000021e4d       0xe4 Example/SW4STM32/startup_stm32l476xx.o
- .debug_line    0x0000000000021f31      0xedb Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_line    0x0000000000022e0c      0x661 Middlewares/FreeRTOS/list.o
- .debug_line    0x000000000002346d      0xd60 Middlewares/FreeRTOS/queue.o
- .debug_line    0x00000000000241cd     0x13ed Middlewares/FreeRTOS/tasks.o
- .debug_line    0x00000000000255ba      0x8b5 Middlewares/FreeRTOS/timers.o
- .debug_line    0x0000000000025e6f      0x6fa Middlewares/FreeRTOS/portable/heap_4.o
- .debug_line    0x0000000000026569      0x73d Middlewares/FreeRTOS/portable/port.o
- .debug_line    0x0000000000026ca6     0x12a1 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_line    0x0000000000027f47     0x1398 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
- .debug_line    0x00000000000292df      0xcd9 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
- .debug_line    0x0000000000029fb8      0xe9b Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
- .debug_line    0x000000000002ae53      0xd52 Middlewares/STM32_BlueNRG/HCI/hci.o
- .debug_line    0x000000000002bba5      0xfbf Middlewares/STM32_BlueNRG/HCI/hci_le.o
- .debug_line    0x000000000002cb64      0xce0 Middlewares/STM32_BlueNRG/Utils/ble_list.o
- .debug_line    0x000000000002d844      0xb24 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
- .debug_line    0x000000000002e368      0x4cc Middlewares/STM32_BlueNRG/Utils/osal.o
- .debug_line    0x000000000002e834      0xcec Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
- .debug_line    0x000000000002f520      0xcb0 Middlewares/STM32_USBD_Library/Core/usbd_core.o
- .debug_line    0x00000000000301d0      0xc31 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
- .debug_line    0x0000000000030e01      0xb3c Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+ .debug_line    0x0000000000001211     0x24aa Application/User/main.o
+ .debug_line    0x00000000000036bb     0x1b53 Application/User/sensor_service.o
+ .debug_line    0x000000000000520e     0x1190 Application/User/stm32l4xx_hal_msp.o
+ .debug_line    0x000000000000639e     0x14d6 Application/User/stm32l4xx_it.o
+ .debug_line    0x0000000000007874     0x12ad Application/User/usbd_cdc_interface.o
+ .debug_line    0x0000000000008b21     0x13f6 Application/User/usbd_conf.o
+ .debug_line    0x0000000000009f17      0xbf5 Application/User/usbd_desc.o
+ .debug_line    0x000000000000ab0c      0x5e7 CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+ .debug_line    0x000000000000b0f3      0x8d9 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+ .debug_line    0x000000000000b9cc      0xa06 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+ .debug_line    0x000000000000c3d2     0x1649 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+ .debug_line    0x000000000000da1b      0x7fa CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+ .debug_line    0x000000000000e215      0x7f5 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+ .debug_line    0x000000000000ea0a      0x5b5 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+ .debug_line    0x000000000000efbf      0x5b5 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+ .debug_line    0x000000000000f574     0x14b3 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+ .debug_line    0x0000000000010a27     0x13d3 Drivers/BSP/SensorTile/SensorTile.o
+ .debug_line    0x0000000000011dfa      0xd7e Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_line    0x0000000000012b78      0xa13 Drivers/CMSIS/system_stm32l4xx.o
+ .debug_line    0x000000000001358b      0xbe9 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+ .debug_line    0x0000000000014174      0xbdd Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+ .debug_line    0x0000000000014d51      0xd23 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+ .debug_line    0x0000000000015a74      0xb78 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+ .debug_line    0x00000000000165ec      0xfaf Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+ .debug_line    0x000000000001759b      0xa8e Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+ .debug_line    0x0000000000018029      0xaef Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+ .debug_line    0x0000000000018b18      0xdca Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+ .debug_line    0x00000000000198e2     0x15e2 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+ .debug_line    0x000000000001aec4     0x1121 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+ .debug_line    0x000000000001bfe5     0x1e22 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+ .debug_line    0x000000000001de07     0x2117 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+ .debug_line    0x000000000001ff1e      0xfb1 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+ .debug_line    0x0000000000020ecf     0x108f Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+ .debug_line    0x0000000000021f5e       0xe4 Example/SW4STM32/startup_stm32l476xx.o
+ .debug_line    0x0000000000022042      0xedb Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_line    0x0000000000022f1d      0x661 Middlewares/FreeRTOS/list.o
+ .debug_line    0x000000000002357e      0xd60 Middlewares/FreeRTOS/queue.o
+ .debug_line    0x00000000000242de     0x13ed Middlewares/FreeRTOS/tasks.o
+ .debug_line    0x00000000000256cb      0x8b5 Middlewares/FreeRTOS/timers.o
+ .debug_line    0x0000000000025f80      0x6fa Middlewares/FreeRTOS/portable/heap_4.o
+ .debug_line    0x000000000002667a      0x73d Middlewares/FreeRTOS/portable/port.o
+ .debug_line    0x0000000000026db7     0x12a1 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_line    0x0000000000028058     0x1398 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_line    0x00000000000293f0      0xcd9 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+ .debug_line    0x000000000002a0c9      0xe9b Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_line    0x000000000002af64      0xd52 Middlewares/STM32_BlueNRG/HCI/hci.o
+ .debug_line    0x000000000002bcb6      0xfbf Middlewares/STM32_BlueNRG/HCI/hci_le.o
+ .debug_line    0x000000000002cc75      0xce0 Middlewares/STM32_BlueNRG/Utils/ble_list.o
+ .debug_line    0x000000000002d955      0xb24 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+ .debug_line    0x000000000002e479      0x4cc Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_line    0x000000000002e945      0xcec Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+ .debug_line    0x000000000002f631      0xcb0 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+ .debug_line    0x00000000000302e1      0xc31 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+ .debug_line    0x0000000000030f12      0xb3c Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
 
-.debug_str      0x0000000000000000   0x169d24
+.debug_str      0x0000000000000000   0x16a40c
  .debug_str     0x0000000000000000    0xf96e6 Application/User/TargetPlatform.o
                                       0xf9d87 (size before relaxing)
- .debug_str     0x00000000000f96e6    0x62295 Application/User/main.o
-                                     0x15c43f (size before relaxing)
- .debug_str     0x000000000015b97b     0x113f Application/User/sensor_service.o
+ .debug_str     0x00000000000f96e6    0x62984 Application/User/main.o
+                                     0x15cb60 (size before relaxing)
+ .debug_str     0x000000000015c06a     0x113f Application/User/sensor_service.o
                                      0x1069fb (size before relaxing)
- .debug_str     0x000000000015caba      0x667 Application/User/stm32l4xx_hal_msp.o
+ .debug_str     0x000000000015d1a9      0x667 Application/User/stm32l4xx_hal_msp.o
                                       0xf9bdf (size before relaxing)
- .debug_str     0x000000000015d121      0x534 Application/User/stm32l4xx_it.o
+ .debug_str     0x000000000015d810      0x534 Application/User/stm32l4xx_it.o
                                       0xff8f9 (size before relaxing)
- .debug_str     0x000000000015d655      0x278 Application/User/usbd_cdc_interface.o
+ .debug_str     0x000000000015dd44      0x278 Application/User/usbd_cdc_interface.o
                                       0xfa996 (size before relaxing)
- .debug_str     0x000000000015d8cd      0x4b0 Application/User/usbd_conf.o
+ .debug_str     0x000000000015dfbc      0x4b0 Application/User/usbd_conf.o
                                       0xfac25 (size before relaxing)
- .debug_str     0x000000000015dd7d      0x2d0 Application/User/usbd_desc.o
+ .debug_str     0x000000000015e46c      0x2d0 Application/User/usbd_desc.o
                                       0xefb84 (size before relaxing)
- .debug_str     0x000000000015e04d       0x9e CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+ .debug_str     0x000000000015e73c       0x9e CMSIS/NN/ActivationFunctions/arm_relu_q7.o
                                        0x8df9 (size before relaxing)
- .debug_str     0x000000000015e0eb      0x337 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+ .debug_str     0x000000000015e7da      0x337 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
                                        0x90e9 (size before relaxing)
- .debug_str     0x000000000015e422      0x13b CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+ .debug_str     0x000000000015eb11      0x13b CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
                                        0x90ab (size before relaxing)
- .debug_str     0x000000000015e55d       0xda CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+ .debug_str     0x000000000015ec4c       0xda CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
                                       0xfa7ac (size before relaxing)
- .debug_str     0x000000000015e637       0x8d CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+ .debug_str     0x000000000015ed26       0x8d CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
                                        0x8f14 (size before relaxing)
- .debug_str     0x000000000015e6c4       0xf2 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+ .debug_str     0x000000000015edb3       0xf2 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
                                        0x8fb8 (size before relaxing)
- .debug_str     0x000000000015e7b6       0x95 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+ .debug_str     0x000000000015eea5       0x95 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
                                        0x8d8b (size before relaxing)
- .debug_str     0x000000000015e84b       0x84 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+ .debug_str     0x000000000015ef3a       0x84 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
                                        0x8d95 (size before relaxing)
- .debug_str     0x000000000015e8cf      0x1a2 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+ .debug_str     0x000000000015efbe      0x1a2 CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
                                       0xfa7ef (size before relaxing)
- .debug_str     0x000000000015ea71      0x889 Drivers/BSP/SensorTile/SensorTile.o
+ .debug_str     0x000000000015f160      0x889 Drivers/BSP/SensorTile/SensorTile.o
                                       0xf1541 (size before relaxing)
- .debug_str     0x000000000015f2fa      0x2bb Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_str     0x000000000015f9e9      0x2bb Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
                                       0xf0c35 (size before relaxing)
- .debug_str     0x000000000015f5b5      0x12c Drivers/CMSIS/system_stm32l4xx.o
+ .debug_str     0x000000000015fca4      0x12c Drivers/CMSIS/system_stm32l4xx.o
                                       0xeefa4 (size before relaxing)
- .debug_str     0x000000000015f6e1      0x5d5 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+ .debug_str     0x000000000015fdd0      0x5d5 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
                                       0xefaa4 (size before relaxing)
- .debug_str     0x000000000015fcb6      0x308 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+ .debug_str     0x00000000001603a5      0x308 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
                                       0xef7a2 (size before relaxing)
- .debug_str     0x000000000015ffbe      0x251 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+ .debug_str     0x00000000001606ad      0x251 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
                                       0xef204 (size before relaxing)
- .debug_str     0x000000000016020f      0x1e0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+ .debug_str     0x00000000001608fe      0x1e0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
                                       0xef256 (size before relaxing)
- .debug_str     0x00000000001603ef      0x5a9 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+ .debug_str     0x0000000000160ade      0x5a9 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
                                       0xef986 (size before relaxing)
- .debug_str     0x0000000000160998      0x1ac Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+ .debug_str     0x0000000000161087      0x1ac Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
                                       0xef47c (size before relaxing)
- .debug_str     0x0000000000160b44      0x2e3 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+ .debug_str     0x0000000000161233      0x2e3 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
                                       0xef30a (size before relaxing)
- .debug_str     0x0000000000160e27      0x382 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+ .debug_str     0x0000000000161516      0x382 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
                                       0xef47f (size before relaxing)
- .debug_str     0x00000000001611a9      0x3c6 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+ .debug_str     0x0000000000161898      0x3c6 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
                                       0xf95d1 (size before relaxing)
- .debug_str     0x000000000016156f      0x386 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+ .debug_str     0x0000000000161c5e      0x386 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
                                       0xef762 (size before relaxing)
- .debug_str     0x00000000001618f5      0x557 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+ .debug_str     0x0000000000161fe4      0x557 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
                                       0xef7c7 (size before relaxing)
- .debug_str     0x0000000000161e4c      0xcda Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+ .debug_str     0x000000000016253b      0xcda Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
                                       0xeff76 (size before relaxing)
- .debug_str     0x0000000000162b26      0x696 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+ .debug_str     0x0000000000163215      0x696 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
                                       0xef9a8 (size before relaxing)
- .debug_str     0x00000000001631bc      0x403 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+ .debug_str     0x00000000001638ab      0x403 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
                                       0xef7e3 (size before relaxing)
- .debug_str     0x00000000001635bf       0x94 Example/SW4STM32/startup_stm32l476xx.o
+ .debug_str     0x0000000000163cae       0x94 Example/SW4STM32/startup_stm32l476xx.o
                                         0x120 (size before relaxing)
- .debug_str     0x0000000000163653      0x7c0 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_str     0x0000000000163d42      0x7c0 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
                                        0xd1d9 (size before relaxing)
- .debug_str     0x0000000000163e13      0x183 Middlewares/FreeRTOS/list.o
+ .debug_str     0x0000000000164502      0x183 Middlewares/FreeRTOS/list.o
                                        0x9dbc (size before relaxing)
- .debug_str     0x0000000000163f96      0x7da Middlewares/FreeRTOS/queue.o
+ .debug_str     0x0000000000164685      0x7da Middlewares/FreeRTOS/queue.o
                                        0xb50f (size before relaxing)
- .debug_str     0x0000000000164770     0x1218 Middlewares/FreeRTOS/tasks.o
+ .debug_str     0x0000000000164e5f     0x1218 Middlewares/FreeRTOS/tasks.o
                                        0xc1f0 (size before relaxing)
- .debug_str     0x0000000000165988      0x437 Middlewares/FreeRTOS/timers.o
+ .debug_str     0x0000000000166077      0x437 Middlewares/FreeRTOS/timers.o
                                        0xb935 (size before relaxing)
- .debug_str     0x0000000000165dbf      0x275 Middlewares/FreeRTOS/portable/heap_4.o
+ .debug_str     0x00000000001664ae      0x275 Middlewares/FreeRTOS/portable/heap_4.o
                                        0xa4fc (size before relaxing)
- .debug_str     0x0000000000166034      0x86b Middlewares/FreeRTOS/portable/port.o
+ .debug_str     0x0000000000166723      0x86b Middlewares/FreeRTOS/portable/port.o
                                        0x7fe9 (size before relaxing)
- .debug_str     0x000000000016689f      0xdec Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_str     0x0000000000166f8e      0xdec Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
                                       0xf47b8 (size before relaxing)
- .debug_str     0x000000000016768b      0xc27 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_str     0x0000000000167d7a      0xc27 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
                                       0xf4830 (size before relaxing)
- .debug_str     0x00000000001682b2      0x27d Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+ .debug_str     0x00000000001689a1      0x27d Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
                                       0xf41dc (size before relaxing)
- .debug_str     0x000000000016852f      0x643 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_str     0x0000000000168c1e      0x643 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
                                       0xf5346 (size before relaxing)
- .debug_str     0x0000000000168b72      0x2aa Middlewares/STM32_BlueNRG/HCI/hci.o
+ .debug_str     0x0000000000169261      0x2a3 Middlewares/STM32_BlueNRG/HCI/hci.o
                                       0xf191d (size before relaxing)
- .debug_str     0x0000000000168e1c      0x74d Middlewares/STM32_BlueNRG/HCI/hci_le.o
+ .debug_str     0x0000000000169504      0x74d Middlewares/STM32_BlueNRG/HCI/hci_le.o
                                       0xf188b (size before relaxing)
- .debug_str     0x0000000000169569      0x135 Middlewares/STM32_BlueNRG/Utils/ble_list.o
+ .debug_str     0x0000000000169c51      0x135 Middlewares/STM32_BlueNRG/Utils/ble_list.o
                                       0xeefa8 (size before relaxing)
- .debug_str     0x000000000016969e       0xad Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+ .debug_str     0x0000000000169d86       0xad Middlewares/STM32_BlueNRG/Utils/gp_timer.o
                                       0xef664 (size before relaxing)
- .debug_str     0x000000000016974b       0x7a Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_str     0x0000000000169e33       0x7a Middlewares/STM32_BlueNRG/Utils/osal.o
                                        0x77d4 (size before relaxing)
- .debug_str     0x00000000001697c5      0x24f Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+ .debug_str     0x0000000000169ead      0x24f Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
                                       0xf015b (size before relaxing)
- .debug_str     0x0000000000169a14      0x175 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+ .debug_str     0x000000000016a0fc      0x175 Middlewares/STM32_USBD_Library/Core/usbd_core.o
                                       0xefdd3 (size before relaxing)
- .debug_str     0x0000000000169b89      0x10f Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+ .debug_str     0x000000000016a271      0x10f Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
                                       0xefced (size before relaxing)
- .debug_str     0x0000000000169c98       0x8c Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+ .debug_str     0x000000000016a380       0x8c Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
                                       0xefc1a (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
@@ -43247,91 +43255,91 @@ OUTPUT(STM32L476RG_NUCLEO.elf elf32-littlearm)
  .comment       0x000000000000007f       0x80 Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
  .comment       0x000000000000007f       0x80 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
 
-.debug_frame    0x0000000000000000     0x7ce4
+.debug_frame    0x0000000000000000     0x7d78
  .debug_frame   0x0000000000000000       0x40 Application/User/TargetPlatform.o
- .debug_frame   0x0000000000000040      0x384 Application/User/main.o
- .debug_frame   0x00000000000003c4      0x2e0 Application/User/sensor_service.o
- .debug_frame   0x00000000000006a4       0x98 Application/User/stm32l4xx_hal_msp.o
- .debug_frame   0x000000000000073c       0xec Application/User/stm32l4xx_it.o
- .debug_frame   0x0000000000000828       0xac Application/User/usbd_cdc_interface.o
- .debug_frame   0x00000000000008d4      0x260 Application/User/usbd_conf.o
- .debug_frame   0x0000000000000b34       0xac Application/User/usbd_desc.o
- .debug_frame   0x0000000000000be0       0x2c CMSIS/NN/ActivationFunctions/arm_relu_q7.o
- .debug_frame   0x0000000000000c0c       0xbc CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
- .debug_frame   0x0000000000000cc8       0x78 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
- .debug_frame   0x0000000000000d40       0xb4 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
- .debug_frame   0x0000000000000df4       0x80 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
- .debug_frame   0x0000000000000e74       0x80 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
- .debug_frame   0x0000000000000ef4       0x30 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
- .debug_frame   0x0000000000000f24       0x38 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
- .debug_frame   0x0000000000000f5c       0x9c CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
- .debug_frame   0x0000000000000ff8      0x4a4 Drivers/BSP/SensorTile/SensorTile.o
- .debug_frame   0x000000000000149c      0x1bc Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
- .debug_frame   0x0000000000001658       0x48 Drivers/CMSIS/system_stm32l4xx.o
- .debug_frame   0x00000000000016a0      0x24c Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
- .debug_frame   0x00000000000018ec      0x158 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
- .debug_frame   0x0000000000001a44      0x1a8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
- .debug_frame   0x0000000000001bec       0xf8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
- .debug_frame   0x0000000000001ce4      0x304 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
- .debug_frame   0x0000000000001fe8       0xc0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
- .debug_frame   0x00000000000020a8      0x124 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
- .debug_frame   0x00000000000021cc      0x278 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
- .debug_frame   0x0000000000002444      0x160 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
- .debug_frame   0x00000000000025a4      0x260 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
- .debug_frame   0x0000000000002804      0x778 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
- .debug_frame   0x0000000000002f7c      0xa10 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
- .debug_frame   0x000000000000398c      0x398 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
- .debug_frame   0x0000000000003d24      0x524 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
- .debug_frame   0x0000000000004248      0x624 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
- .debug_frame   0x000000000000486c       0x88 Middlewares/FreeRTOS/list.o
- .debug_frame   0x00000000000048f4      0x2e4 Middlewares/FreeRTOS/queue.o
- .debug_frame   0x0000000000004bd8      0x648 Middlewares/FreeRTOS/tasks.o
- .debug_frame   0x0000000000005220      0x184 Middlewares/FreeRTOS/timers.o
- .debug_frame   0x00000000000053a4       0xb0 Middlewares/FreeRTOS/portable/heap_4.o
- .debug_frame   0x0000000000005454      0x130 Middlewares/FreeRTOS/portable/port.o
- .debug_frame   0x0000000000005584      0x614 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
- .debug_frame   0x0000000000005b98      0x710 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
- .debug_frame   0x00000000000062a8      0x184 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
- .debug_frame   0x000000000000642c      0x180 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
- .debug_frame   0x00000000000065ac      0x104 Middlewares/STM32_BlueNRG/HCI/hci.o
- .debug_frame   0x00000000000066b0      0x490 Middlewares/STM32_BlueNRG/HCI/hci_le.o
- .debug_frame   0x0000000000006b40       0xe8 Middlewares/STM32_BlueNRG/Utils/ble_list.o
- .debug_frame   0x0000000000006c28       0x80 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
- .debug_frame   0x0000000000006ca8       0x30 Middlewares/STM32_BlueNRG/Utils/osal.o
- .debug_frame   0x0000000000006cd8      0x158 Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
- .debug_frame   0x0000000000006e30      0x1c0 Middlewares/STM32_USBD_Library/Core/usbd_core.o
- .debug_frame   0x0000000000006ff0       0xbc Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
- .debug_frame   0x00000000000070ac       0xc0 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
- .debug_frame   0x000000000000716c       0xac /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x0000000000007218       0x50 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x0000000000007268       0xc4 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x000000000000732c       0x20 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_unorddf2.o)
- .debug_frame   0x000000000000734c       0x24 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x0000000000007370       0x2c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .debug_frame   0x000000000000739c       0x30 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
- .debug_frame   0x00000000000073cc       0x28 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00000000000073f4       0x28 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x000000000000741c       0x20 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x000000000000743c       0x38 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000000000007474       0x2c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00000000000074a0       0x8c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
- .debug_frame   0x000000000000752c       0x60 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x000000000000758c       0x2c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00000000000075b8       0x6c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sprintf.o)
- .debug_frame   0x0000000000007624       0x70 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-dtoa.o)
- .debug_frame   0x0000000000007694      0x11c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-findfp.o)
- .debug_frame   0x00000000000077b0       0x40 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-localeconv.o)
- .debug_frame   0x00000000000077f0       0x30 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000000000007820      0x244 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mprec.o)
- .debug_frame   0x0000000000007a64       0x2c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-callocr.o)
- .debug_frame   0x0000000000007a90       0x90 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x0000000000007b20       0x5c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
- .debug_frame   0x0000000000007b7c       0x68 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-locale.o)
- .debug_frame   0x0000000000007be4       0x48 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mbtowc_r.o)
- .debug_frame   0x0000000000007c2c       0x3c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x0000000000007c68       0x3c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-wctomb_r.o)
- .debug_frame   0x0000000000007ca4       0x20 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x0000000000007cc4       0x20 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000000040      0x418 Application/User/main.o
+ .debug_frame   0x0000000000000458      0x2e0 Application/User/sensor_service.o
+ .debug_frame   0x0000000000000738       0x98 Application/User/stm32l4xx_hal_msp.o
+ .debug_frame   0x00000000000007d0       0xec Application/User/stm32l4xx_it.o
+ .debug_frame   0x00000000000008bc       0xac Application/User/usbd_cdc_interface.o
+ .debug_frame   0x0000000000000968      0x260 Application/User/usbd_conf.o
+ .debug_frame   0x0000000000000bc8       0xac Application/User/usbd_desc.o
+ .debug_frame   0x0000000000000c74       0x2c CMSIS/NN/ActivationFunctions/arm_relu_q7.o
+ .debug_frame   0x0000000000000ca0       0xbc CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.o
+ .debug_frame   0x0000000000000d5c       0x78 CMSIS/NN/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.o
+ .debug_frame   0x0000000000000dd4       0xb4 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.o
+ .debug_frame   0x0000000000000e88       0x80 CMSIS/NN/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.o
+ .debug_frame   0x0000000000000f08       0x80 CMSIS/NN/FullyConnectedFunctions/arm_fully_connected_q7_opt.o
+ .debug_frame   0x0000000000000f88       0x30 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_no_shift.o
+ .debug_frame   0x0000000000000fb8       0x38 CMSIS/NN/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.o
+ .debug_frame   0x0000000000000ff0       0x9c CMSIS/NN/PoolingFunctions/arm_pool_q7_HWC.o
+ .debug_frame   0x000000000000108c      0x4a4 Drivers/BSP/SensorTile/SensorTile.o
+ .debug_frame   0x0000000000001530      0x1bc Drivers/BSP/SensorTile/SensorTile_BlueNRG.o
+ .debug_frame   0x00000000000016ec       0x48 Drivers/CMSIS/system_stm32l4xx.o
+ .debug_frame   0x0000000000001734      0x24c Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o
+ .debug_frame   0x0000000000001980      0x158 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o
+ .debug_frame   0x0000000000001ad8      0x1a8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o
+ .debug_frame   0x0000000000001c80       0xf8 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o
+ .debug_frame   0x0000000000001d78      0x304 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd.o
+ .debug_frame   0x000000000000207c       0xc0 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pcd_ex.o
+ .debug_frame   0x000000000000213c      0x124 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o
+ .debug_frame   0x0000000000002260      0x278 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o
+ .debug_frame   0x00000000000024d8      0x160 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o
+ .debug_frame   0x0000000000002638      0x260 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o
+ .debug_frame   0x0000000000002898      0x778 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_spi.o
+ .debug_frame   0x0000000000003010      0xa10 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o
+ .debug_frame   0x0000000000003a20      0x398 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o
+ .debug_frame   0x0000000000003db8      0x524 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_ll_usb.o
+ .debug_frame   0x00000000000042dc      0x624 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o
+ .debug_frame   0x0000000000004900       0x88 Middlewares/FreeRTOS/list.o
+ .debug_frame   0x0000000000004988      0x2e4 Middlewares/FreeRTOS/queue.o
+ .debug_frame   0x0000000000004c6c      0x648 Middlewares/FreeRTOS/tasks.o
+ .debug_frame   0x00000000000052b4      0x184 Middlewares/FreeRTOS/timers.o
+ .debug_frame   0x0000000000005438       0xb0 Middlewares/FreeRTOS/portable/heap_4.o
+ .debug_frame   0x00000000000054e8      0x130 Middlewares/FreeRTOS/portable/port.o
+ .debug_frame   0x0000000000005618      0x614 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gap_aci.o
+ .debug_frame   0x0000000000005c2c      0x710 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_gatt_aci.o
+ .debug_frame   0x000000000000633c      0x184 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_hal_aci.o
+ .debug_frame   0x00000000000064c0      0x180 Middlewares/STM32_BlueNRG/HCI/Controller/bluenrg_utils.o
+ .debug_frame   0x0000000000006640      0x104 Middlewares/STM32_BlueNRG/HCI/hci.o
+ .debug_frame   0x0000000000006744      0x490 Middlewares/STM32_BlueNRG/HCI/hci_le.o
+ .debug_frame   0x0000000000006bd4       0xe8 Middlewares/STM32_BlueNRG/Utils/ble_list.o
+ .debug_frame   0x0000000000006cbc       0x80 Middlewares/STM32_BlueNRG/Utils/gp_timer.o
+ .debug_frame   0x0000000000006d3c       0x30 Middlewares/STM32_BlueNRG/Utils/osal.o
+ .debug_frame   0x0000000000006d6c      0x158 Middlewares/STM32_USBD_Library/Class/CDC/usbd_cdc.o
+ .debug_frame   0x0000000000006ec4      0x1c0 Middlewares/STM32_USBD_Library/Core/usbd_core.o
+ .debug_frame   0x0000000000007084       0xbc Middlewares/STM32_USBD_Library/Core/usbd_ctlreq.o
+ .debug_frame   0x0000000000007140       0xc0 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o
+ .debug_frame   0x0000000000007200       0xac /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000000000072ac       0x50 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00000000000072fc       0xc4 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x00000000000073c0       0x20 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x00000000000073e0       0x24 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000000000007404       0x2c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000007430       0x30 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000007460       0x28 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000007488       0x28 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00000000000074b0       0x20 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000000074d0       0x38 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000007508       0x2c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000007534       0x8c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
+ .debug_frame   0x00000000000075c0       0x60 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000000000007620       0x2c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x000000000000764c       0x6c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x00000000000076b8       0x70 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-dtoa.o)
+ .debug_frame   0x0000000000007728      0x11c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-findfp.o)
+ .debug_frame   0x0000000000007844       0x40 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-localeconv.o)
+ .debug_frame   0x0000000000007884       0x30 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00000000000078b4      0x244 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mprec.o)
+ .debug_frame   0x0000000000007af8       0x2c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-callocr.o)
+ .debug_frame   0x0000000000007b24       0x90 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x0000000000007bb4       0x5c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x0000000000007c10       0x68 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-locale.o)
+ .debug_frame   0x0000000000007c78       0x48 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x0000000000007cc0       0x3c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000000000007cfc       0x3c /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-wctomb_r.o)
+ .debug_frame   0x0000000000007d38       0x20 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000000000007d58       0x20 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
 
 .stabstr        0x0000000000000000      0x1b9
  .stabstr       0x0000000000000000      0x1b9 /home/matteo/.Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(close.o)
